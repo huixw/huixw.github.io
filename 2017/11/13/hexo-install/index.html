@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -80,13 +80,14 @@
 
 
 <meta name="description" content="本文主要针对mac OS 我们可能看见过类似于这样的博客  WX20170527-115859  相对于csdn、简书等网站,个人博客更加自由,文章格式排版等能够自定义。程序员更应该搭建一个专属于自己的博客了。 1.创建Github 域名和空间1.1 注册GitHub账号注意注册账号后,username必须小写,你的域名将会是 username.github.io(此处不会修改username自行">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo简易博客搭建">
-<meta property="og:url" content="http://yoursite.com/2017/11/13/index/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/11/13/hexo-install/index.html">
 <meta property="og:site_name" content="hui.sir&#39;s home">
 <meta property="og:description" content="本文主要针对mac OS 我们可能看见过类似于这样的博客  WX20170527-115859  相对于csdn、简书等网站,个人博客更加自由,文章格式排版等能够自定义。程序员更应该搭建一个专属于自己的博客了。 1.创建Github 域名和空间1.1 注册GitHub账号注意注册账号后,username必须小写,你的域名将会是 username.github.io(此处不会修改username自行">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-13T09:41:02.000Z">
+<meta property="og:updated_time" content="2017-11-13T10:59:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo简易博客搭建">
 <meta name="twitter:description" content="本文主要针对mac OS 我们可能看见过类似于这样的博客  WX20170527-115859  相对于csdn、简书等网站,个人博客更加自由,文章格式排版等能够自定义。程序员更应该搭建一个专属于自己的博客了。 1.创建Github 域名和空间1.1 注册GitHub账号注意注册账号后,username必须小写,你的域名将会是 username.github.io(此处不会修改username自行">
@@ -119,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/13/index/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/13/hexo-install/"/>
 
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/13/index/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/13/hexo-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hui.sir">
@@ -301,6 +302,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂项/" itemprop="url" rel="index">
+                    <span itemprop="name">杂项</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -391,6 +414,7 @@
 <p>有人这么解释这个错误, 这不就是少了个库么. 然后搜了一下打印出的错误中的 ‘DTraceProviderBindings’ 这个, 发现在博客根目录/node_modules/dtrace-provider 这个目录中出现. 那就重新安装一下. 或者先删掉, 再重新装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 一样, 不好用时加上 sudo</span><br><span class="line">npm uninstall dtrace-provider</span><br><span class="line">npm install -g dtrace-provider</span><br><span class="line">安装简洁版hexo(笔者下载hexo后按照这个安装成功后,hexo命令找不到,未成功)</span><br></pre></td></tr></table></figure></p>
 <p>终端执行命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo --no-optional</span><br><span class="line">有人说这样执行</span><br><span class="line"></span><br><span class="line">// 第一句执行的命令</span><br><span class="line">// 如果执行时候直接报错, 可以试试在前面加上 sudo.</span><br><span class="line">npm uninstall hexo</span><br><span class="line">// 下面这两句句都是排在第二句执行的, 任选其一, 我是一个一个试的...</span><br><span class="line">// 1</span><br><span class="line">npm install hexo --no-optional</span><br><span class="line">// 2</span><br><span class="line">npm install hexo --no-optional --save</span><br><span class="line">// 第三句执行的命令</span><br><span class="line">hexo clean</span><br><span class="line">// 第四句命令</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -405,27 +429,17 @@
 
     <footer class="post-footer">
       
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/13/skills/" rel="prev" title="openvpn搭建">
-                openvpn搭建 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
         </div>
+      
+
+      
+      
+      
+
       
 
       
@@ -499,12 +513,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
