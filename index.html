@@ -303,8 +303,68 @@
       
         
           
-            <p>Cannot read property ‘forEach’ of undefined</p>
-
+            <p>本文主要针对mac OS</p>
+<p>我们可能看见过类似于这样的博客</p>
+<blockquote>
+<p>WX20170527-115859</p>
+</blockquote>
+<p>相对于csdn、简书等网站,个人博客更加自由,文章格式排版等能够自定义。程序员更应该搭建一个专属于自己的博客了。</p>
+<h1 id="1-创建Github-域名和空间"><a href="#1-创建Github-域名和空间" class="headerlink" title="1.创建Github 域名和空间"></a>1.创建Github 域名和空间</h1><h2 id="1-1-注册GitHub账号"><a href="#1-1-注册GitHub账号" class="headerlink" title="1.1 注册GitHub账号"></a>1.1 注册GitHub账号</h2><p>注意注册账号后,username必须小写,你的域名将会是 username.github.io(此处不会修改username自行谷歌)</p>
+<h2 id="1-2-创建仓库"><a href="#1-2-创建仓库" class="headerlink" title="1.2 创建仓库"></a>1.2 创建仓库</h2><p>点击首页任意位置出现的 New repository按钮创建仓库, Respository name 中的username.github.io 的username 一定与前面的Owner 一致，记住你的username下面会用到</p>
+<p>WX20170527-124416</p>
+<h1 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h1><p>Hexo 可以说是目前最流行的博客框架了，基于Nodejs，更多信息可以google，下面需要安装的工具包括 Git，Nodejs，Hexo</p>
+<ol>
+<li><p>安装git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 如果已安装HomeBrew 无需执行此行</span><br><span class="line">$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br><span class="line">$ brew install git   // 安装Git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装Node.js</p>
+</li>
+<li><p>Homebrew 安装方式，此安装方式无需重启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ brew install nvm  </span><br><span class="line">$ mkdir ~/.nvm</span><br><span class="line">$ echo &quot;export NVM_DIR=~/.nvm&quot; &gt;&gt; .bash_profile</span><br><span class="line">$ echo &quot;. $(brew --prefix nvm)/nvm.sh&quot; &gt;&gt; .bash_profile</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启终端,生效</p>
+</li>
+<li>nvm help 验证nvm是否正确安装</li>
+<li><p>安装Node.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install 4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装Hexo</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>编写博客,发布到线上</p>
+<p>接下来通过Hexo初始化博客</p>
+<p>创建博客</p>
+<p>将命令中的username换成你自己的username,注意和github上username保持一致,执行成功后会创建出一个名为username.github.io的文件夹(/Users/wuming目录下)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init username.github.io</span><br></pre></td></tr></table></figure>
+<p>更改配置</p>
+<p>主题</p>
+<p>Hexo有更多主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd username.github.io</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>基础配置</p>
+<p>打开username.github.io的文件夹中的_config.yml文件,修改几个键值对并保存,键值之间之间一定要有空格,否则发布时报错. 更多设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">title: dimsky 的 9 维空间    //你博客的名字</span><br><span class="line"> author: dimsky  //你的名字</span><br><span class="line"> language: zh-Hans    //语言 中文</span><br><span class="line"> theme: next   //刚刚安装的主题名称</span><br><span class="line"> deploy:</span><br><span class="line">   type: git    //使用Git 发布</span><br><span class="line">   repo: https://github.com/username/username.github.io.git    // 刚创建的Github仓库</span><br><span class="line">主题配置</span><br><span class="line"></span><br><span class="line">主题配置文件在username.github.io/themes/next/_config.yml中修改。设置详情</span><br></pre></td></tr></table></figure>
+<h1 id="3-写文章"><a href="#3-写文章" class="headerlink" title="3.写文章"></a>3.写文章</h1><p>在username.github.io/source/_posts下创建你的第一个博客吧，例如，创建一个名为HelloWorld.md的文件，用Markdown大肆发挥吧，注意保存</p>
+<p>测试</p>
+<p>运行命令后,可以在浏览器中输入<a href="https://localhost:4000" target="_blank" rel="external">https://localhost:4000</a> 访问了,注意关掉全局翻墙哦!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">安装部署发布工具</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>发布</p>
+<p>如果是第一次,终端会让输入GitHub的账号和密码,正确输入后,博客会传至GitHub仓库中,进入仓库中查看提交记录,正确提交后,就可以线上进入自己的博客地址啦!</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
+<h1 id="4-使用Hexo博客时常见错误解决"><a href="#4-使用Hexo博客时常见错误解决" class="headerlink" title="4.使用Hexo博客时常见错误解决"></a>4.使用Hexo博客时常见错误解决</h1><blockquote>
+<p>大概意思是少了依赖库,下面提供几种方法,各位遇到类似问题的可以试一试能否解决问题,笔者通过第一种方法解决了问题</p>
+</blockquote>
+<ol>
+<li>{ [Error: Cannot find module ‘./build/Release/DTraceProviderBindings’] code: ‘MODULE_NOT_FOUND’ }<br>(笔者通过这个解决的)删除hexo以及dtrace-provider相关文件,然后重新安装Hexo</li>
+</ol>
+<blockquote>
+<p>删除/usr/local/lib/node_modules/ 目录下的 hexo 相关的文件夹<br>删除/usr/local/bin/ 下的 hexo相关文件. 直接删掉就好了</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//重新安装hexo,回到第三步继续</span><br><span class="line">$ sudo npm install hexo-cli -g</span><br><span class="line">dtrace-provider删掉重装(笔者试过无效,不知道对它人是否有效)</span><br></pre></td></tr></table></figure>
+<p>有人这么解释这个错误, 这不就是少了个库么. 然后搜了一下打印出的错误中的 ‘DTraceProviderBindings’ 这个, 发现在博客根目录/node_modules/dtrace-provider 这个目录中出现. 那就重新安装一下. 或者先删掉, 再重新装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 一样, 不好用时加上 sudo</span><br><span class="line">npm uninstall dtrace-provider</span><br><span class="line">npm install -g dtrace-provider</span><br><span class="line">安装简洁版hexo(笔者下载hexo后按照这个安装成功后,hexo命令找不到,未成功)</span><br></pre></td></tr></table></figure></p>
+<p>终端执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo --no-optional</span><br><span class="line">有人说这样执行</span><br><span class="line"></span><br><span class="line">// 第一句执行的命令</span><br><span class="line">// 如果执行时候直接报错, 可以试试在前面加上 sudo.</span><br><span class="line">npm uninstall hexo</span><br><span class="line">// 下面这两句句都是排在第二句执行的, 任选其一, 我是一个一个试的...</span><br><span class="line">// 1</span><br><span class="line">npm install hexo --no-optional</span><br><span class="line">// 2</span><br><span class="line">npm install hexo --no-optional --save</span><br><span class="line">// 第三句执行的命令</span><br><span class="line">hexo clean</span><br><span class="line">// 第四句命令</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
           
         
       
