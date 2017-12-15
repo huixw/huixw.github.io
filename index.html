@@ -391,6 +391,7 @@ var themeMenus = {};
 <li>消息发送，用于相邻节点间的通讯 sendMessage</li>
 <li>消息合并逻辑 messageCombining</li>
 </ol>
+<!-- more -->
 <h3 id="Pregel-API"><a href="#Pregel-API" class="headerlink" title="Pregel API"></a>Pregel API</h3><p>​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计算每个顶点的属性直到达到一个定点条件。已经提出了一系列图平行抽象来表达这些迭代算法。GraphX公开了Pregel API的变体。</p>
 <p>​    在高层次上，GraphX中的Pregel操作符是一种<em>限制于图形拓扑的</em>批量同步并行消息抽象 。Pregel算子在一系列超级步骤中执行，其中顶点从前一个超级步骤接收入站消息的<em>总和</em>，计算顶点属性的新值，然后在下一个超级步骤中将消息发送到相邻顶点。与Pregel不同，消息作为边三元组的函数并行计算，消息计算可以访问源和目标顶点属性。不接收消息的顶点在超级步骤内跳过。Pregel运算符终止迭代，并在没有剩余消息时返回最终图形。</p>
 <blockquote>
@@ -421,67 +422,6 @@ var themeMenus = {};
       
   <span class="ico-tags"></span>
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/graphx/">graphx</a></li></ul>
-
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-hexo-experience"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/11/13/hexo-experience/">hexo-体验-常用命令</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2017/11/13/hexo-experience/" class="article-date">
-	  <time datetime="2017-11-13T13:57:57.000Z" itemprop="datePublished">十一月 13, 2017</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <a id="more"></a>
-<h1 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-<p>将生成source/categories目录以及source/categories/index.md</p>
-<p>index.md文件内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2017-11-13 21:57:57</span><br><span class="line">type: categories</span><br></pre></td></tr></table></figure>
-<p>source下的目录标识一个菜单，需要和跟所选主题配置文件中配置保持一致</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;page-name&quot;</span><br></pre></td></tr></table></figure>
-<p>在 source/_post/目录下生成page-name.md</p>
-<p>page-name.md带有文件头</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: page-name</span><br><span class="line">date: 2017-11-13 21:57:57</span><br><span class="line">categories: &quot;类别1&quot;</span><br></pre></td></tr></table></figure>
-<p>会将该内容归入到对应的类别中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo s 启动本地预览</span><br><span class="line">hexo clean 清空内容</span><br><span class="line">hexo g  生成页面</span><br><span class="line">hexo d 内容发布</span><br></pre></td></tr></table></figure>
-<p>命令连续执行可以用 &amp;&amp;</p>
-<p>如 hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/杂项/">杂项</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
       
             
@@ -570,6 +510,67 @@ var themeMenus = {};
 <p>发布</p>
 <p>如果是第一次,终端会让输入GitHub的账号和密码,正确输入后,博客会传至GitHub仓库中,进入仓库中查看提交记录,正确提交后,就可以线上进入自己的博客地址啦!</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/杂项/">杂项</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-hexo-experience"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/11/13/hexo-experience/">hexo-体验-常用命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2017/11/13/hexo-experience/" class="article-date">
+	  <time datetime="2017-11-13T13:57:57.000Z" itemprop="datePublished">十一月 13, 2017</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<h1 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+<p>将生成source/categories目录以及source/categories/index.md</p>
+<p>index.md文件内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2017-11-13 21:57:57</span><br><span class="line">type: categories</span><br></pre></td></tr></table></figure>
+<p>source下的目录标识一个菜单，需要和跟所选主题配置文件中配置保持一致</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;page-name&quot;</span><br></pre></td></tr></table></figure>
+<p>在 source/_post/目录下生成page-name.md</p>
+<p>page-name.md带有文件头</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: page-name</span><br><span class="line">date: 2017-11-13 21:57:57</span><br><span class="line">categories: &quot;类别1&quot;</span><br></pre></td></tr></table></figure>
+<p>会将该内容归入到对应的类别中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo s 启动本地预览</span><br><span class="line">hexo clean 清空内容</span><br><span class="line">hexo g  生成页面</span><br><span class="line">hexo d 内容发布</span><br></pre></td></tr></table></figure>
+<p>命令连续执行可以用 &amp;&amp;</p>
+<p>如 hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</p>
 
       
     </div>
@@ -732,7 +733,7 @@ var themeMenus = {};
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/11/13/hexo-experience/">hexo-体验-常用命令</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/11/13/hexo-install/">hexo搭建</a></h6>
               <span>十一月 13, 2017</span>
             </div>
 
@@ -744,7 +745,7 @@ var themeMenus = {};
               <div class="widget-entry-summary" style="margin: 0;">
             
 
-              <h6 style="margin: 0;"><a href="/2017/11/13/hexo-install/">hexo搭建</a></h6>
+              <h6 style="margin: 0;"><a href="/2017/11/13/hexo-experience/">hexo-体验-常用命令</a></h6>
               <span>十一月 13, 2017</span>
             </div>
 
