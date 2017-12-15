@@ -21,18 +21,18 @@
   
   
   
-  <meta name="description" content="Scala 学习笔记Scala 函数柯里化(Currying)柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。 实例首先我们定义一个函数 1def add(x:Int,y:Int)=x+y 那么我们应用的时候，应该是这样用：add(1,2) 现在我们把这个函数变一下形： 1def add(x:Int)(y:Int">
+  <meta name="description" content="Scala 学习笔记Scala 函数柯里化(Currying)柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。 实例首先我们定义一个函数 1def add(x:Int,y:Int)=x+y 那么我们应用的时候，应该是这样用：add(1,2) 现在我们把这个函数变一下形： 1def add(x:Int)(y:In">
 <meta name="keywords" content="scala">
 <meta property="og:type" content="article">
 <meta property="og:title" content="scala-experience">
 <meta property="og:url" content="https://huixw.github.io/2017/12/04/scala-experience/index.html">
 <meta property="og:site_name" content="sivan&#39;s room">
-<meta property="og:description" content="Scala 学习笔记Scala 函数柯里化(Currying)柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。 实例首先我们定义一个函数 1def add(x:Int,y:Int)=x+y 那么我们应用的时候，应该是这样用：add(1,2) 现在我们把这个函数变一下形： 1def add(x:Int)(y:Int">
+<meta property="og:description" content="Scala 学习笔记Scala 函数柯里化(Currying)柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。 实例首先我们定义一个函数 1def add(x:Int,y:Int)=x+y 那么我们应用的时候，应该是这样用：add(1,2) 现在我们把这个函数变一下形： 1def add(x:Int)(y:In">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-05T01:57:37.326Z">
+<meta property="og:updated_time" content="2017-12-15T04:03:18.719Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scala-experience">
-<meta name="twitter:description" content="Scala 学习笔记Scala 函数柯里化(Currying)柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。 实例首先我们定义一个函数 1def add(x:Int,y:Int)=x+y 那么我们应用的时候，应该是这样用：add(1,2) 现在我们把这个函数变一下形： 1def add(x:Int)(y:Int">
+<meta name="twitter:description" content="Scala 学习笔记Scala 函数柯里化(Currying)柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。 实例首先我们定义一个函数 1def add(x:Int,y:Int)=x+y 那么我们应用的时候，应该是这样用：add(1,2) 现在我们把这个函数变一下形： 1def add(x:Int)(y:In">
   
     <link rel="alternate" href="/atom.xml" title="sivan&#39;s room" type="application/atom+xml">
   
@@ -160,7 +160,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Scala-学习笔记"><a href="#Scala-学习笔记" class="headerlink" title="Scala 学习笔记"></a>Scala 学习笔记</h1><h2 id="Scala-函数柯里化-Currying"><a href="#Scala-函数柯里化-Currying" class="headerlink" title="Scala 函数柯里化(Currying)"></a>Scala 函数柯里化(Currying)</h2><p>柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。</p>
+        <a id="more"></a>
+<h1 id="Scala-学习笔记"><a href="#Scala-学习笔记" class="headerlink" title="Scala 学习笔记"></a>Scala 学习笔记</h1><h2 id="Scala-函数柯里化-Currying"><a href="#Scala-函数柯里化-Currying" class="headerlink" title="Scala 函数柯里化(Currying)"></a>Scala 函数柯里化(Currying)</h2><p>柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。</p>
 <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>首先我们定义一个函数</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def add(x:Int,y:Int)=x+y</span><br></pre></td></tr></table></figure>
 <p>那么我们应用的时候，应该是这样用：add(1,2)</p>

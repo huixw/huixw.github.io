@@ -21,18 +21,18 @@
   
   
   
-  <meta name="description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);  堆">
+  <meta name="description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);">
 <meta name="keywords" content="heap sort">
 <meta property="og:type" content="article">
 <meta property="og:title" content="algorithm-sort-heap">
 <meta property="og:url" content="https://huixw.github.io/2017/12/14/algorithm-sort-heap/index.html">
 <meta property="og:site_name" content="sivan&#39;s room">
-<meta property="og:description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);  堆">
+<meta property="og:description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-14T03:26:01.627Z">
+<meta property="og:updated_time" content="2017-12-15T04:03:01.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="algorithm-sort-heap">
-<meta name="twitter:description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);  堆">
+<meta name="twitter:description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);">
   
     <link rel="alternate" href="/atom.xml" title="sivan&#39;s room" type="application/atom+xml">
   
@@ -160,7 +160,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><blockquote>
+        <a id="more"></a>
+<h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><blockquote>
 <p><strong>堆排序</strong>（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足<em>堆积的性质</em>：即子结点的键值或索引总是小于（或者大于）它的父节点。</p>
 </blockquote>
 <h2 id="堆节点的访问"><a href="#堆节点的访问" class="headerlink" title="堆节点的访问"></a>堆节点的访问</h2><p>通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：</p>

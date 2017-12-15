@@ -21,18 +21,18 @@
   
   
   
-  <meta name="description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计算">
+  <meta name="description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计">
 <meta name="keywords" content="graphx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SPARK GRAPHX 学习">
 <meta property="og:url" content="https://huixw.github.io/2017/11/30/spark-graphx-experience/index.html">
 <meta property="og:site_name" content="sivan&#39;s room">
-<meta property="og:description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计算">
+<meta property="og:description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-14T11:18:07.894Z">
+<meta property="og:updated_time" content="2017-12-15T04:03:27.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SPARK GRAPHX 学习">
-<meta name="twitter:description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计算">
+<meta name="twitter:description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计">
   
     <link rel="alternate" href="/atom.xml" title="sivan&#39;s room" type="application/atom+xml">
   
@@ -160,7 +160,8 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="SPARK-GRAPHX-学习"><a href="#SPARK-GRAPHX-学习" class="headerlink" title="SPARK GRAPHX 学习"></a>SPARK GRAPHX 学习</h1><h2 id="Pregel的计算模型"><a href="#Pregel的计算模型" class="headerlink" title="Pregel的计算模型"></a><strong><em>Pregel的计算模型</em></strong></h2><h3 id="Pregel计算模型三要素："><a href="#Pregel计算模型三要素：" class="headerlink" title="Pregel计算模型三要素："></a>Pregel计算模型三要素：</h3><ol>
+        <a id="more"></a>
+<h1 id="SPARK-GRAPHX-学习"><a href="#SPARK-GRAPHX-学习" class="headerlink" title="SPARK GRAPHX 学习"></a>SPARK GRAPHX 学习</h1><h2 id="Pregel的计算模型"><a href="#Pregel的计算模型" class="headerlink" title="Pregel的计算模型"></a><strong><em>Pregel的计算模型</em></strong></h2><h3 id="Pregel计算模型三要素："><a href="#Pregel计算模型三要素：" class="headerlink" title="Pregel计算模型三要素："></a>Pregel计算模型三要素：</h3><ol>
 <li>作用于每个顶点的处理逻辑 vertexProgram</li>
 <li>消息发送，用于相邻节点间的通讯 sendMessage</li>
 <li>消息合并逻辑 messageCombining</li>
