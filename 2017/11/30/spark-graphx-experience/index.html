@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining   Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新">
+<meta name="description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计算">
 <meta name="keywords" content="graphx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SPARK GRAPHX 学习">
 <meta property="og:url" content="https://huixw.github.io/2017/11/30/spark-graphx-experience/index.html">
 <meta property="og:site_name" content="sivan&#39;s room">
-<meta property="og:description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining   Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新">
+<meta property="og:description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计算">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-15T06:26:54.793Z">
+<meta property="og:updated_time" content="2017-12-15T07:25:18.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SPARK GRAPHX 学习">
-<meta name="twitter:description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining   Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新">
+<meta name="twitter:description" content="SPARK GRAPHX 学习Pregel的计算模型Pregel计算模型三要素： 作用于每个顶点的处理逻辑 vertexProgram 消息发送，用于相邻节点间的通讯 sendMessage 消息合并逻辑 messageCombining  Pregel API​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计算">
 
 
 
@@ -390,13 +390,11 @@
       
 
       
-        <a id="more"></a>
-<h1 id="SPARK-GRAPHX-学习"><a href="#SPARK-GRAPHX-学习" class="headerlink" title="SPARK GRAPHX 学习"></a>SPARK GRAPHX 学习</h1><h2 id="Pregel的计算模型"><a href="#Pregel的计算模型" class="headerlink" title="Pregel的计算模型"></a><strong><em>Pregel的计算模型</em></strong></h2><h3 id="Pregel计算模型三要素："><a href="#Pregel计算模型三要素：" class="headerlink" title="Pregel计算模型三要素："></a>Pregel计算模型三要素：</h3><ol>
+        <h1 id="SPARK-GRAPHX-学习"><a href="#SPARK-GRAPHX-学习" class="headerlink" title="SPARK GRAPHX 学习"></a>SPARK GRAPHX 学习</h1><h2 id="Pregel的计算模型"><a href="#Pregel的计算模型" class="headerlink" title="Pregel的计算模型"></a><strong><em>Pregel的计算模型</em></strong></h2><h3 id="Pregel计算模型三要素："><a href="#Pregel计算模型三要素：" class="headerlink" title="Pregel计算模型三要素："></a>Pregel计算模型三要素：</h3><ol>
 <li>作用于每个顶点的处理逻辑 vertexProgram</li>
 <li>消息发送，用于相邻节点间的通讯 sendMessage</li>
 <li>消息合并逻辑 messageCombining</li>
 </ol>
-<!-- more -->
 <h3 id="Pregel-API"><a href="#Pregel-API" class="headerlink" title="Pregel API"></a>Pregel API</h3><p>​    图是固有的递归数据结构，因为顶点的属性取决于其邻居的属性，而邻居的属性又取决于邻居的属性。因此，许多重要的图形算法迭代地重新计算每个顶点的属性直到达到一个定点条件。已经提出了一系列图平行抽象来表达这些迭代算法。GraphX公开了Pregel API的变体。</p>
 <p>​    在高层次上，GraphX中的Pregel操作符是一种<em>限制于图形拓扑的</em>批量同步并行消息抽象 。Pregel算子在一系列超级步骤中执行，其中顶点从前一个超级步骤接收入站消息的<em>总和</em>，计算顶点属性的新值，然后在下一个超级步骤中将消息发送到相邻顶点。与Pregel不同，消息作为边三元组的函数并行计算，消息计算可以访问源和目标顶点属性。不接收消息的顶点在超级步骤内跳过。Pregel运算符终止迭代，并在没有剩余消息时返回最终图形。</p>
 <blockquote>
@@ -535,7 +533,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -546,7 +544,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -557,7 +555,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>

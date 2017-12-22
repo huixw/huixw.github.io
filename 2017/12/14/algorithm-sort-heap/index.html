@@ -83,20 +83,18 @@
 
 
 
-<meta name="description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);">
+<meta name="description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);  堆">
 <meta name="keywords" content="排序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="堆排序">
 <meta property="og:url" content="https://huixw.github.io/2017/12/14/algorithm-sort-heap/index.html">
 <meta property="og:site_name" content="sivan&#39;s room">
-<meta property="og:description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);">
+<meta property="og:description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);  堆">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://huixw.github.io/cover.jpg">
-<meta property="og:updated_time" content="2017-12-15T07:05:12.801Z">
+<meta property="og:updated_time" content="2017-12-21T03:27:56.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="堆排序">
-<meta name="twitter:description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);">
-<meta name="twitter:image" content="https://huixw.github.io/cover.jpg">
+<meta name="twitter:description" content="堆排序 堆排序（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。  堆节点的访问通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：  父节点i的左子节点位置(2i+1); 父节点i的右子节点位置(2i+2); 子节点i的父节点在位置floor((i-1)/2);  堆">
 
 
 
@@ -390,26 +388,9 @@
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="/cover.jpg" rel="gallery_cjb7l33hb0001rsch1pjzaowo"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/cover.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
 
       
-        <p><code><img src="/2017/12/14/algorithm-sort-heap/cover.jpg" title="This is an example image"></code></p>
-<h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><blockquote>
+        <h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><blockquote>
 <p><strong>堆排序</strong>（Heapsort）是指利用[堆]这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足<em>堆积的性质</em>：即子结点的键值或索引总是小于（或者大于）它的父节点。</p>
 </blockquote>
 <h2 id="堆节点的访问"><a href="#堆节点的访问" class="headerlink" title="堆节点的访问"></a>堆节点的访问</h2><p>通常堆是通过一维数组来实现的。在数组起始位置为0的情形中：</p>
@@ -546,7 +527,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -557,7 +538,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -568,7 +549,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>

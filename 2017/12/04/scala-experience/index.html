@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="sivan&#39;s room">
 <meta property="og:description" content="Scala 学习笔记Scala 函数柯里化(Currying)柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。 实例首先我们定义一个函数 1def add(x:Int,y:Int)=x+y 那么我们应用的时候，应该是这样用：add(1,2) 现在我们把这个函数变一下形： 1def add(x:Int)(y:Int">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-15T06:27:11.101Z">
+<meta property="og:updated_time" content="2017-12-18T08:33:45.896Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scala学习笔记">
 <meta name="twitter:description" content="Scala 学习笔记Scala 函数柯里化(Currying)柯里化(currying)是指将原来接收两个参数的函数变成新的接收一个参数的函数的过程。新的函数返回一个以原有第二个参数为参数的函数。 实例首先我们定义一个函数 1def add(x:Int,y:Int)=x+y 那么我们应用的时候，应该是这样用：add(1,2) 现在我们把这个函数变一下形： 1def add(x:Int)(y:Int">
@@ -442,6 +442,7 @@
 <blockquote>
 <p>“type <code>T</code> is a subtype of type <code>U</code>” or “type <code>T</code> has type <code>U</code> as upper bound”</p>
 </blockquote>
+<h2 id="apply方法"><a href="#apply方法" class="headerlink" title="apply方法"></a>apply方法</h2><p>apply方法是对“类名()”的重载，当类或对象有一个主要用途时apply方法提供了很好的语法糖</p>
 
       
     </div>
@@ -561,7 +562,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -572,7 +573,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -583,7 +584,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -618,7 +619,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Scala-学习笔记"><span class="nav-number">1.</span> <span class="nav-text">Scala 学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Scala-函数柯里化-Currying"><span class="nav-number">1.1.</span> <span class="nav-text">Scala 函数柯里化(Currying)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">1.1.1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现过程"><span class="nav-number">1.1.2.</span> <span class="nav-text">实现过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#implicits"><span class="nav-number">1.2.</span> <span class="nav-text">implicits</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标记规则"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">标记规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#范围选择"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">范围选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一次规则"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">一次规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优先规则"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">优先规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命名规则"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">命名规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译器使用-implicit-的几种情况"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">编译器使用 implicit 的几种情况</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广义约束类型（Generalized-type-constraints）"><span class="nav-number">1.3.</span> <span class="nav-text">广义约束类型（Generalized type constraints）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Scala-学习笔记"><span class="nav-number">1.</span> <span class="nav-text">Scala 学习笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Scala-函数柯里化-Currying"><span class="nav-number">1.1.</span> <span class="nav-text">Scala 函数柯里化(Currying)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">1.1.1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现过程"><span class="nav-number">1.1.2.</span> <span class="nav-text">实现过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#implicits"><span class="nav-number">1.2.</span> <span class="nav-text">implicits</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标记规则"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">标记规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#范围选择"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">范围选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一次规则"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">一次规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优先规则"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">优先规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命名规则"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">命名规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译器使用-implicit-的几种情况"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">编译器使用 implicit 的几种情况</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广义约束类型（Generalized-type-constraints）"><span class="nav-number">1.3.</span> <span class="nav-text">广义约束类型（Generalized type constraints）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apply方法"><span class="nav-number">1.4.</span> <span class="nav-text">apply方法</span></a></li></ol></li></ol></div>
             
 
           </div>

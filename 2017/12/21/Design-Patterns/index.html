@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="design patterns," />
 
 
 
@@ -83,16 +83,25 @@
 
 
 
-<meta name="description" content="note everyday">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sivan&#39;s room">
-<meta property="og:url" content="https://huixw.github.io/tags/机器学习/index.html">
+<meta name="description" content="设计模式看懂UML类图从一个示例开始  车的类图结构为&amp;lt;&amp;gt;，表示车是一个抽象类； 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示； 小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示； 小汽车与发动机之间是组合关系，使用带实心箭头的实线表示； 学生与班级之间是聚合关系，使用带空心箭头的实线表示； 学生与身份证之间为关">
+<meta name="keywords" content="design patterns">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Design_Patterns">
+<meta property="og:url" content="https://huixw.github.io/2017/12/21/Design-Patterns/index.html">
 <meta property="og:site_name" content="sivan&#39;s room">
-<meta property="og:description" content="note everyday">
+<meta property="og:description" content="设计模式看懂UML类图从一个示例开始  车的类图结构为&amp;lt;&amp;gt;，表示车是一个抽象类； 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示； 小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示； 小汽车与发动机之间是组合关系，使用带实心箭头的实线表示； 学生与班级之间是聚合关系，使用带空心箭头的实线表示； 学生与身份证之间为关">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_extends_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_aggregation_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_composition_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_association_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_dependency_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/simple_factory_pattern.jpg">
+<meta property="og:updated_time" content="2017-12-22T09:24:56.079Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sivan&#39;s room">
-<meta name="twitter:description" content="note everyday">
+<meta name="twitter:title" content="Design_Patterns">
+<meta name="twitter:description" content="设计模式看懂UML类图从一个示例开始  车的类图结构为&amp;lt;&amp;gt;，表示车是一个抽象类； 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示； 小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示； 小汽车与发动机之间是组合关系，使用带实心箭头的实线表示； 学生与班级之间是聚合关系，使用带空心箭头的实线表示； 学生与身份证之间为关">
+<meta name="twitter:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_extends_b.jpg">
 
 
 
@@ -122,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://huixw.github.io/tags/机器学习/"/>
+  <link rel="canonical" href="https://huixw.github.io/2017/12/21/Design-Patterns/"/>
 
 
 
 
 
-  <title>标签: 机器学习 | sivan's room</title>
+  <title>Design_Patterns | sivan's room</title>
   
 
 
@@ -147,7 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -285,54 +294,209 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>机器学习<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huixw.github.io/2017/12/21/Design-Patterns/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sivan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sivan's room">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/12/06/python-machine-learn/" itemprop="url">
-              
-                <span itemprop="name">Python机器学习</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Design_Patterns</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-06T23:54:53+08:00"
-              content="2017-12-06" >
-          12-06
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T10:41:10+08:00">
+                2017-12-21
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="看懂UML类图"><a href="#看懂UML类图" class="headerlink" title="看懂UML类图"></a>看懂UML类图</h2><h3 id="从一个示例开始"><a href="#从一个示例开始" class="headerlink" title="从一个示例开始"></a>从一个示例开始</h3>
+<ul>
+<li>车的类图结构为&lt;<abstract>&gt;，表示车是一个抽象类；</abstract></li>
+<li>它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示；</li>
+<li>小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示；</li>
+<li>小汽车与发动机之间是组合关系，使用带实心箭头的实线表示；</li>
+<li>学生与班级之间是聚合关系，使用带空心箭头的实线表示；</li>
+<li>学生与身份证之间为关联关系，使用一根实线表示；</li>
+<li>学生上学需要用到自行车，与自行车是一种依赖关系，使用带箭头的虚线表示；</li>
+</ul>
+<h3 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h3><h4 id="泛化关系-generalization"><a href="#泛化关系-generalization" class="headerlink" title="泛化关系(generalization)"></a>泛化关系(generalization)</h4><p>类的继承结构表现在UML中为：泛化(generalize)与实现(realize)：</p>
+<p>泛化是一种继承关系用空心箭头表示</p>
+<img src="/2017/12/21/Design-Patterns/a_extends_b.jpg" title="A继承B">
+<p>实现是一种实现关系用空心虚线箭头表示</p>
+<h4 id="聚合关系-aggregation"><a href="#聚合关系-aggregation" class="headerlink" title="聚合关系(aggregation)"></a>聚合关系(aggregation)</h4><p>聚合关系用一条带空心菱形箭头的直线表示，如下图表示A聚合到B上，或者说B由A组成；</p>
+<img src="/2017/12/21/Design-Patterns/a_aggregation_b.jpg" title="A聚合到B">
+<h4 id="组合关系-composition"><a href="#组合关系-composition" class="headerlink" title="组合关系(composition)"></a>组合关系(composition)</h4><p>组合关系用一条带实心菱形箭头表示，如下图A组成B；</p>
+<img src="/2017/12/21/Design-Patterns/a_composition_b.jpg" title="A是B的组成部分">
+<h4 id="关联关系-association"><a href="#关联关系-association" class="headerlink" title="关联关系(association)"></a>关联关系(association)</h4><p>关联关系是用一条直线表示的；它描述不同类的对象之间的结构关系；它是一种静态关系， 通常与运行状态无关，一般由常识等因素决定的；它一般用来定义对象之间静态的、天然的结构； 所以，关联关系是一种“强关联”的关系；</p>
+<p>比如，乘车人和车票之间就是一种关联关系；学生和学校就是一种关联关系；</p>
+<p>关联关系默认不强调方向，表示对象间相互知道；如果特别强调方向，如下图，表示A知道B，但 B不知道A；</p>
+<img src="/2017/12/21/Design-Patterns/a_association_b.jpg" title="AB互相关联">
+<h4 id="依赖关系-dependency"><a href="#依赖关系-dependency" class="headerlink" title="依赖关系(dependency)"></a>依赖关系(dependency)</h4><p>依赖关系使用一套带箭头的虚线表示；如下图表示A依赖B；他描述一个对象在运行期间会用到另一个对象的性关系；</p>
+<img src="/2017/12/21/Design-Patterns/a_dependency_b.jpg" title="A依赖B">
+<h2 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h2><h3 id="简单工程模式（Simple-Factory-Pattern）"><a href="#简单工程模式（Simple-Factory-Pattern）" class="headerlink" title="简单工程模式（Simple Factory Pattern）"></a>简单工程模式（Simple Factory Pattern）</h3><h4 id="模式动机"><a href="#模式动机" class="headerlink" title="模式动机"></a>模式动机</h4><p>考虑一个简单的软件应用场景，一个软件系统可以提供多个外观不同的按钮（如，圆形、方形、菱形），这些按钮都源自同一个基类，继承后不同的子类修改了部分属性从而使得他们可以呈现不同的外观，如果我们希望使用这些按钮时，不需要知道这些按钮类的具体名字，只需要知道表示一个按钮类的一个参数，并提供一个调用方便的方法，把该参数传入方法即可返回一个相应的按钮对象，此时就可以使用简单工厂模式。</p>
+<h4 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h4><p>简单工厂模式：又称静态工厂方法模式，它属于类创建型模式。在简单工厂模式中，可根据参数的不同返回不同类的实例。简单工厂模式专门定义一个类负责创建其他类的实例，被创建的实例通常具有共同的父类。</p>
+<h4 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h4><p>简单工厂模式包含如下角色：</p>
+<ul>
+<li><p>Factory：工厂角色</p>
+<p>工厂角色    负责创建所有实例的内部逻辑</p>
+</li>
+<li><p>Product：抽象产品角色</p>
+<p>抽象产品角色是创建所有对象的父类，负责描述所有实例所共有公共接口</p>
+</li>
+<li><p>ConcreteProduct：具体产品角色</p>
+<p>具体产品角色是创建目标，所有创建的对象都充当这个角色的某个具体类的实例</p>
+</li>
+</ul>
+<img src="/2017/12/21/Design-Patterns/simple_factory_pattern.jpg" title="简单工厂模式">
+<h3 id="工厂方法模式（Factory-Method-Pattern）"><a href="#工厂方法模式（Factory-Method-Pattern）" class="headerlink" title="工厂方法模式（Factory Method Pattern）"></a>工厂方法模式（Factory Method Pattern）</h3><h3 id="抽象工程模式（Abstract-Factory）"><a href="#抽象工程模式（Abstract-Factory）" class="headerlink" title="抽象工程模式（Abstract Factory）"></a>抽象工程模式（Abstract Factory）</h3><h3 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h3><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><h2 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h2><h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><p>###装饰模式</p>
+<h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h2><h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><h3 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h3><h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><h3 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h3><h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p>摘自 <a href="https://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html#id1" target="_blank" rel="external">https://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html#id1</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/design-patterns/" rel="tag"># design patterns</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/15/docker-learning/" rel="next" title="docker-learning">
+                <i class="fa fa-chevron-left"></i> docker-learning
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -340,6 +504,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -360,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -423,6 +600,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#看懂UML类图"><span class="nav-number">1.1.</span> <span class="nav-text">看懂UML类图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从一个示例开始"><span class="nav-number">1.1.1.</span> <span class="nav-text">从一个示例开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类之间的关系"><span class="nav-number">1.1.2.</span> <span class="nav-text">类之间的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛化关系-generalization"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">泛化关系(generalization)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#聚合关系-aggregation"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">聚合关系(aggregation)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组合关系-composition"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">组合关系(composition)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关联关系-association"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">关联关系(association)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖关系-dependency"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">依赖关系(dependency)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建型模式"><span class="nav-number">1.2.</span> <span class="nav-text">创建型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单工程模式（Simple-Factory-Pattern）"><span class="nav-number">1.2.1.</span> <span class="nav-text">简单工程模式（Simple Factory Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模式动机"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">模式动机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式定义"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">模式定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式结构"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">模式结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂方法模式（Factory-Method-Pattern）"><span class="nav-number">1.2.2.</span> <span class="nav-text">工厂方法模式（Factory Method Pattern）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象工程模式（Abstract-Factory）"><span class="nav-number">1.2.3.</span> <span class="nav-text">抽象工程模式（Abstract Factory）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建造者模式"><span class="nav-number">1.2.4.</span> <span class="nav-text">建造者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式"><span class="nav-number">1.2.5.</span> <span class="nav-text">单例模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构型模式"><span class="nav-number">1.3.</span> <span class="nav-text">结构型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适配器模式"><span class="nav-number">1.3.1.</span> <span class="nav-text">适配器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桥接模式"><span class="nav-number">1.3.2.</span> <span class="nav-text">桥接模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外观模式"><span class="nav-number">1.3.3.</span> <span class="nav-text">外观模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#享元模式"><span class="nav-number">1.3.4.</span> <span class="nav-text">享元模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理模式"><span class="nav-number">1.3.5.</span> <span class="nav-text">代理模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行为型模式"><span class="nav-number">1.4.</span> <span class="nav-text">行为型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令模式"><span class="nav-number">1.4.1.</span> <span class="nav-text">命令模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中介者模式"><span class="nav-number">1.4.2.</span> <span class="nav-text">中介者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观察者模式"><span class="nav-number">1.4.3.</span> <span class="nav-text">观察者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#状态模式"><span class="nav-number">1.4.4.</span> <span class="nav-text">状态模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#策略模式"><span class="nav-number">1.4.5.</span> <span class="nav-text">策略模式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number">2.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -556,6 +749,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
