@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="rabbitmq," />
+  <meta name="keywords" content="cdh," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="离线安装rabbitmq安装包下载版本介绍：https://www.rabbitmq.com/install-rpm.html rabbitmq版本: 3.6.10 1wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-generic-unix-3.6.10.tar.xz erlang版本： h">
-<meta name="keywords" content="rabbitmq">
+<meta name="description" content="问题1现象​    CDH集群重启，重启 cloudera-scm-agent  和 cloudera-scm-server h后，登陆CDH控制台重启 cloudera-management-service , 其中的 Activity Monitor、Service Monitor 、Host Monitor、Event Server、Alert Publisher  均启动失败，并且启动页面">
+<meta name="keywords" content="cdh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rabbitmq-install">
-<meta property="og:url" content="https://huixw.github.io/2018/03/14/rabbitmq-install/index.html">
+<meta property="og:title" content="CDH维护问题记录">
+<meta property="og:url" content="https://huixw.github.io/2018/06/21/cdh-note/index.html">
 <meta property="og:site_name" content="stay hungry, stay foolish.">
-<meta property="og:description" content="离线安装rabbitmq安装包下载版本介绍：https://www.rabbitmq.com/install-rpm.html rabbitmq版本: 3.6.10 1wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-generic-unix-3.6.10.tar.xz erlang版本： h">
+<meta property="og:description" content="问题1现象​    CDH集群重启，重启 cloudera-scm-agent  和 cloudera-scm-server h后，登陆CDH控制台重启 cloudera-management-service , 其中的 Activity Monitor、Service Monitor 、Host Monitor、Event Server、Alert Publisher  均启动失败，并且启动页面">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-14T09:34:46.909Z">
+<meta property="og:updated_time" content="2018-06-23T08:05:52.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="rabbitmq-install">
-<meta name="twitter:description" content="离线安装rabbitmq安装包下载版本介绍：https://www.rabbitmq.com/install-rpm.html rabbitmq版本: 3.6.10 1wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-generic-unix-3.6.10.tar.xz erlang版本： h">
+<meta name="twitter:title" content="CDH维护问题记录">
+<meta name="twitter:description" content="问题1现象​    CDH集群重启，重启 cloudera-scm-agent  和 cloudera-scm-server h后，登陆CDH控制台重启 cloudera-management-service , 其中的 Activity Monitor、Service Monitor 、Host Monitor、Event Server、Alert Publisher  均启动失败，并且启动页面">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://huixw.github.io/2018/03/14/rabbitmq-install/"/>
+  <link rel="canonical" href="https://huixw.github.io/2018/06/21/cdh-note/"/>
 
 
 
 
 
-  <title>rabbitmq-install | stay hungry, stay foolish.</title>
+  <title>CDH维护问题记录 | stay hungry, stay foolish.</title>
   
 
 
@@ -301,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://huixw.github.io/2018/03/14/rabbitmq-install/">
+    <link itemprop="mainEntityOfPage" href="https://huixw.github.io/2018/06/21/cdh-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sivan">
@@ -318,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">rabbitmq-install</h1>
+          <h1 class="post-title" itemprop="name headline">CDH维护问题记录</h1>
         
 
         <div class="post-meta">
@@ -330,8 +330,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T11:38:06+08:00">
-                2018-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-21T20:20:08+08:00">
+                2018-06-21
               </time>
             
 
@@ -353,8 +353,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂项/" itemprop="url" rel="index">
-                    <span itemprop="name">杂项</span>
+                  <a href="/categories/大数据/" itemprop="url" rel="index">
+                    <span itemprop="name">大数据</span>
                   </a>
                 </span>
 
@@ -390,79 +390,11 @@
       
 
       
-        <h1 id="离线安装rabbitmq"><a href="#离线安装rabbitmq" class="headerlink" title="离线安装rabbitmq"></a>离线安装rabbitmq</h1><h2 id="安装包下载"><a href="#安装包下载" class="headerlink" title="安装包下载"></a>安装包下载</h2><p>版本介绍：<a href="https://www.rabbitmq.com/install-rpm.html" target="_blank" rel="external">https://www.rabbitmq.com/install-rpm.html</a></p>
-<p>rabbitmq版本: 3.6.10</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.10/rabbitmq-server-generic-unix-3.6.10.tar.xz</span><br></pre></td></tr></table></figure>
-<p>erlang版本：</p>
-<p><a href="https://www.erlang.org/downloads" target="_blank" rel="external">https://www.erlang.org/downloads</a>  </p>
-<p>otp_src_20.2.tar.gz</p>
-<h2 id="erlang安装"><a href="#erlang安装" class="headerlink" title="erlang安装"></a>erlang安装</h2><p>安装中提示 curses notfond 手动安装 cureses包</p>
-<p><a href="http://ftp.gnu.org/gnu/ncurses/" target="_blank" rel="external">http://ftp.gnu.org/gnu/ncurses/</a> 下载最新版ncureses</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># tar -zxvf ncurses-6.1.tar.gz</span><br><span class="line"># cd ncurses-6.0</span><br><span class="line"># ./configure --with-shared --without-debug --without-ada --enable-overwrite  </span><br><span class="line">#  make</span><br><span class="line">#  make install</span><br></pre></td></tr></table></figure>
-<p>安装erlang</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd otp_src_19.3</span><br><span class="line">./configure -prefix=/mnt/data/erlang</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">cd /mnt/data/erlang</span><br><span class="line">cd bin</span><br><span class="line">ln -s /mnt/data/erlang/bin/erl /usr/local/bin/erl</span><br></pre></td></tr></table></figure>
-<h2 id="rabbitmq安装"><a href="#rabbitmq安装" class="headerlink" title="rabbitmq安装"></a>rabbitmq安装</h2><p>rpm -ivh rabbitmq-server-3.7.4-1.el7.noarch.rpm</p>
-<p>提示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar -Jxvf rabbitmq-server-generic-unix-3.6.10.tar.xz </span><br><span class="line">tar -xvf rabbitmq-server-generic-unix-3.6.10.tar </span><br><span class="line">cp -R rabbitmq_server-3.6.10/   /mnt/data/rabbitmq/</span><br><span class="line">chmod -R 755 /mnt/data/rabbitmq/sbin</span><br></pre></td></tr></table></figure>
-<h2 id="rabbitmq基本操作"><a href="#rabbitmq基本操作" class="headerlink" title="rabbitmq基本操作"></a>rabbitmq基本操作</h2><h3 id="rabbitMQ启动"><a href="#rabbitMQ启动" class="headerlink" title="rabbitMQ启动"></a>rabbitMQ启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /mnt/data/rabbitmq/sbin</span><br><span class="line">nohup ./rabbitmq-server &amp;</span><br></pre></td></tr></table></figure>
-<h3 id="开启Web管理插件"><a href="#开启Web管理插件" class="headerlink" title="开启Web管理插件"></a>开启Web管理插件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/rabbitmq/sbin</span><br><span class="line">./rabbitmq-plugins enable rabbitmq_management</span><br></pre></td></tr></table></figure>
-<h3 id="rabbitMQ重启"><a href="#rabbitMQ重启" class="headerlink" title="rabbitMQ重启"></a>rabbitMQ重启</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/rabbitmq/sbin</span><br><span class="line">./rabbitmqctl stop   ## 停应用</span><br><span class="line">./rabbitmq-server    ## 启动应用</span><br></pre></td></tr></table></figure>
-<h3 id="通过web管理"><a href="#通过web管理" class="headerlink" title="通过web管理"></a>通过web管理</h3><p>访问<a href="http://localhost:15672/" target="_blank" rel="external">http://localhost:15672</a><br>默认用户/密码 ： guest/guest<br>注意初始状态只能本地登录，不可通过远程web访问，给权限也不行。需要远程访问的，必须新建用户并赋权限。</p>
-<h3 id="用户管理并赋权限"><a href="#用户管理并赋权限" class="headerlink" title="用户管理并赋权限"></a>用户管理并赋权限</h3><ol>
-<li>添加用户<br>如用户名：mqadmin 密码：mqadmin</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/rabbitmq/sbin</span><br><span class="line">./rabbitmqctl add_user mqadmin mqadmin</span><br></pre></td></tr></table></figure>
-<ol>
-<li>给用户添加角色<br>角色有none、management、policymaker、monitoring、administrator等，administrator为超级管理员</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./rabbitmqctl set_user_tags mqadmin administrator</span><br></pre></td></tr></table></figure>
-<ol>
-<li>给用户授权</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./rabbitmqctl set_permissions -p / mqadmin &apos;.*&apos; &apos;.*&apos; &apos;.*&apos;</span><br></pre></td></tr></table></figure>
-<p>在浏览器中输入：<a href="http://ip:15672/" target="_blank" rel="external">http://ip:15672</a></p>
-<table>
-<thead>
-<tr>
-<th>端口</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4369</td>
-<td>epmd, a peer discovery service used by RabbitMQ nodes and CLI tools</td>
-</tr>
-<tr>
-<td>5672, 5671</td>
-<td>used by AMQP 0-9-1 and 1.0 clients without and with TLS</td>
-</tr>
-<tr>
-<td>25672</td>
-<td>used by Erlang distribution for inter-node and CLI tools communication and is allocated from a dynamic range (limited to a single port by default, computed as AMQP port + 20000). See networking guide for details.</td>
-</tr>
-<tr>
-<td>15672</td>
-<td>HTTP API clients and rabbitmqadmin (only if the management plugin is enabled)</td>
-</tr>
-<tr>
-<td>61613, 61614</td>
-<td>STOMP clients without and with TLS (only if the STOMP plugin is enabled)</td>
-</tr>
-<tr>
-<td>1883, 8883</td>
-<td>(MQTT clients without and with TLS, if the MQTT plugin is enabled</td>
-</tr>
-<tr>
-<td>15674</td>
-<td>STOMP-over-WebSockets clients (only if the Web STOMP plugin is enabled)</td>
-</tr>
-<tr>
-<td>15675</td>
-<td>MQTT-over-WebSockets clients (only if the Web MQTT plugin is enabled)</td>
-</tr>
-</tbody>
-</table>
+        <h1 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h1><h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>​    CDH集群重启，重启 <em>cloudera-scm-agent</em>  和 <em>cloudera-scm-server</em> h后，登陆CDH控制台重启 <em>cloudera-management-service</em> , 其中的 <em>Activity Monitor、Service Monitor 、Host Monitor、Event Server、Alert Publisher</em>  均启动失败，并且启动页面上日志显示 <em>unknown</em> 字样。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>​    起初一直以为是CM服务的问题，少启动了什么服务，日志一直报 <em>avro 服务连接不上，最终超时</em> 。</p>
+<p>​    最终找到解决办法是 <em>cloudera-scm-agent</em> 重启的问题，<em>cloudera-scm-agent</em> 重启必须保证   <strong>supervised </strong> 进程杀死；即执行 <code>cloudera-scm-agent stop</code> 后需要 <code>ps -ef |grep supervised</code> 然后 <code>kill -9 PID</code> 最后启动 <code>cloudera-scm-agent start</code> 。</p>
+<p>​    之后再重启 <em>zookeeper、cloudera-management-service</em> 就OK了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>​    还需要对CDH集群更深入了解下。</p>
 
       
     </div>
@@ -480,7 +412,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/rabbitmq/" rel="tag"># rabbitmq</a>
+            <a href="/tags/cdh/" rel="tag"># cdh</a>
           
         </div>
       
@@ -493,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/25/Machine-Learning-Evluate/" rel="next" title="机器学习-模型评估">
-                <i class="fa fa-chevron-left"></i> 机器学习-模型评估
+              <a href="/2018/06/12/python-env/" rel="next" title="Conda创建虚拟环境">
+                <i class="fa fa-chevron-left"></i> Conda创建虚拟环境
               </a>
             
           </div>
@@ -503,8 +435,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/15/rpm/" rel="prev" title="rpm">
-                rpm <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/23/squid-install/" rel="prev" title="linux代理服务器squid">
+                linux代理服务器squid <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -639,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#离线安装rabbitmq"><span class="nav-number">1.</span> <span class="nav-text">离线安装rabbitmq</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装包下载"><span class="nav-number">1.1.</span> <span class="nav-text">安装包下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#erlang安装"><span class="nav-number">1.2.</span> <span class="nav-text">erlang安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rabbitmq安装"><span class="nav-number">1.3.</span> <span class="nav-text">rabbitmq安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rabbitmq基本操作"><span class="nav-number">1.4.</span> <span class="nav-text">rabbitmq基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#rabbitMQ启动"><span class="nav-number">1.4.1.</span> <span class="nav-text">rabbitMQ启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启Web管理插件"><span class="nav-number">1.4.2.</span> <span class="nav-text">开启Web管理插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rabbitMQ重启"><span class="nav-number">1.4.3.</span> <span class="nav-text">rabbitMQ重启</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过web管理"><span class="nav-number">1.4.4.</span> <span class="nav-text">通过web管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户管理并赋权限"><span class="nav-number">1.4.5.</span> <span class="nav-text">用户管理并赋权限</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题1"><span class="nav-number">1.</span> <span class="nav-text">问题1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#现象"><span class="nav-number">1.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
