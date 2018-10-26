@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="nginx," />
 
 
 
@@ -83,13 +83,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="stay hungry, stay foolish.">
-<meta property="og:url" content="https://huixw.github.io/categories/算法/index.html">
+<meta name="description" content="简易文件服务器设计与搭建背景​    近期由于项目需要，分布式系统需要使用一个文件服务器，由于项目初期，出于成本，运维考虑，暂时排除掉DFS、TFS这种分布式文件服务器。 Nginx​    Nginx是一个开源的WEB服务器，通过配置可以快速的实现文件服务器，所以这里考虑通过Nginx快速搭建一个文件服务器. Nginx快速搭建文件服务器 这里假设Nginx已经安装完毕，可参考之前安装文章">
+<meta name="keywords" content="nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx搭建建议有权限的文件服务器">
+<meta property="og:url" content="https://huixw.github.io/2018/10/23/nginx-auth-request-module/index.html">
 <meta property="og:site_name" content="stay hungry, stay foolish.">
+<meta property="og:description" content="简易文件服务器设计与搭建背景​    近期由于项目需要，分布式系统需要使用一个文件服务器，由于项目初期，出于成本，运维考虑，暂时排除掉DFS、TFS这种分布式文件服务器。 Nginx​    Nginx是一个开源的WEB服务器，通过配置可以快速的实现文件服务器，所以这里考虑通过Nginx快速搭建一个文件服务器. Nginx快速搭建文件服务器 这里假设Nginx已经安装完毕，可参考之前安装文章">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-23T07:56:48.732Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="stay hungry, stay foolish.">
+<meta name="twitter:title" content="Nginx搭建建议有权限的文件服务器">
+<meta name="twitter:description" content="简易文件服务器设计与搭建背景​    近期由于项目需要，分布式系统需要使用一个文件服务器，由于项目初期，出于成本，运维考虑，暂时排除掉DFS、TFS这种分布式文件服务器。 Nginx​    Nginx是一个开源的WEB服务器，通过配置可以快速的实现文件服务器，所以这里考虑通过Nginx快速搭建一个文件服务器. Nginx快速搭建文件服务器 这里假设Nginx已经安装完毕，可参考之前安装文章">
 
 
 
@@ -119,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://huixw.github.io/categories/算法/"/>
+  <link rel="canonical" href="https://huixw.github.io/2018/10/23/nginx-auth-request-module/"/>
 
 
 
 
 
-  <title>分类: 算法 | stay hungry, stay foolish.</title>
+  <title>Nginx搭建建议有权限的文件服务器 | stay hungry, stay foolish.</title>
   
 
 
@@ -144,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -282,55 +287,197 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>算法<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huixw.github.io/2018/10/23/nginx-auth-request-module/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sivan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="stay hungry, stay foolish.">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/12/14/algorithm-sort-heap/" itemprop="url">
-              
-                <span itemprop="name">堆排序</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Nginx搭建建议有权限的文件服务器</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-14T11:06:35+08:00"
-              content="2017-12-14" >
-          12-14
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-23T11:40:09+08:00">
+                2018-10-23
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂项/" itemprop="url" rel="index">
+                    <span itemprop="name">杂项</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="简易文件服务器设计与搭建"><a href="#简易文件服务器设计与搭建" class="headerlink" title="简易文件服务器设计与搭建"></a>简易文件服务器设计与搭建</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>​    近期由于项目需要，分布式系统需要使用一个文件服务器，由于项目初期，出于成本，运维考虑，暂时排除掉DFS、TFS这种分布式文件服务器。</p>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p>​    Nginx是一个开源的WEB服务器，通过配置可以快速的实现文件服务器，所以这里考虑通过Nginx快速搭建一个文件服务器.</p>
+<h3 id="Nginx快速搭建文件服务器"><a href="#Nginx快速搭建文件服务器" class="headerlink" title="Nginx快速搭建文件服务器"></a>Nginx快速搭建文件服务器</h3><blockquote>
+<p>这里假设Nginx已经安装完毕，可参考之前安装文章</p>
+</blockquote>
+<ul>
+<li><p>打开conf/nginx.conf</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">user</span>  root;					<span class="comment"># 修改用户为可以查看文件的用户</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"><span class="attribute">pid</span>        logs/nginx.pid;</span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>       mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">9999</span>;</span><br><span class="line">        <span class="attribute">server_name</span> _;				<span class="comment"># 名称不坐限制</span></span><br><span class="line">        <span class="attribute">location</span> /images &#123;			<span class="comment"># 匹配path</span></span><br><span class="line">            <span class="attribute">root</span> /mnt/bd/data/marketing;	<span class="comment"># 文件所在主机根目录</span></span><br><span class="line">            <span class="attribute">autoindex</span> <span class="literal">on</span>;					<span class="comment"># 开启文件索引</span></span><br><span class="line">            <span class="attribute">autoindex_exact_size</span> <span class="literal">on</span>;		<span class="comment"># 显示文件大小</span></span><br><span class="line">            <span class="attribute">autoindex_localtime</span> <span class="literal">on</span>;			<span class="comment"># 显示文件日期</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>保存退出，重启nginx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
+<p>此时可以登录浏览器查看<a href="http://myhome:9999/images查看文件列表" target="_blank" rel="external">http://myhome:9999/images查看文件列表</a></p>
+<blockquote>
+<p>注意：这里”location /images”不仅要求请求path包含/images 并且主机目录也要对应/mnt/bd/data/marketing/images否则会报404错误</p>
+</blockquote>
+<p>​    通过以上配置，可以快速完成文件服务器的搭建，但是，实际对外应用中，我们不可能将所有文件给所有用户访问，此时我们可以考虑如何为请求加上访问权限。</p>
+</li>
+</ul>
+<h3 id="Nginx请求认证模块nginx-auth-request-module"><a href="#Nginx请求认证模块nginx-auth-request-module" class="headerlink" title="Nginx请求认证模块nginx-auth-request-module"></a>Nginx请求认证模块nginx-auth-request-module</h3><h4 id="Nginx模块添加"><a href="#Nginx模块添加" class="headerlink" title="Nginx模块添加"></a>Nginx模块添加</h4><p>​    克隆nginx-auth-request-module模块源码到服务器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/perusio/nginx-auth-request-module.git</span><br></pre></td></tr></table></figure>
+<p>​    查看之前nginx的版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nginx/sbin/nginx -V</span><br><span class="line"></span><br><span class="line">nginx version: nginx/1.10.3</span><br><span class="line">built by gcc 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC)</span><br><span class="line">built with OpenSSL 1.0.2k-fips  26 Jan 2017</span><br><span class="line">TLS SNI support enabled</span><br><span class="line">configure arguments: --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --conf-path=/usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
+<p>​    可以看到configure arguments，重新下载对应版本的nginx，解压，进入解压nginx目录执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_v2_module --conf-path=/usr/local/nginx/conf/nginx.conf --add-module=path_To_nginx-auth-request-module</span><br></pre></td></tr></table></figure>
+<h4 id="配置带有权限认证的文件服务器"><a href="#配置带有权限认证的文件服务器" class="headerlink" title="配置带有权限认证的文件服务器"></a>配置带有权限认证的文件服务器</h4><ul>
+<li><p>修改conf/nginx.conf</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">user</span>  root;					<span class="comment"># 修改用户为可以查看文件的用户</span></span><br><span class="line"><span class="attribute">worker_processes</span>  <span class="number">1</span>;</span><br><span class="line"><span class="attribute">pid</span>        logs/nginx.pid;</span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">    <span class="attribute">worker_connections</span>  <span class="number">1024</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="attribute">include</span>       mime.types;</span><br><span class="line">    <span class="attribute">default_type</span>  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#keepalive_timeout  0;</span></span><br><span class="line">    <span class="attribute">keepalive_timeout</span>  <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span> <span class="number">9999</span>;</span><br><span class="line">        <span class="attribute">server_name</span> _;				<span class="comment"># 名称不坐限制</span></span><br><span class="line">        <span class="attribute">location</span> /images &#123;			<span class="comment"># 匹配path</span></span><br><span class="line">        	<span class="attribute">auth_request</span> /auth;		<span class="comment"># 添加认证请求uri ------------------------- 添加请求认证</span></span><br><span class="line">            <span class="attribute">root</span> /mnt/bd/data/marketing;	<span class="comment"># 文件所在主机根目录</span></span><br><span class="line">            <span class="attribute">autoindex</span> <span class="literal">on</span>;					<span class="comment"># 开启文件索引</span></span><br><span class="line">            <span class="attribute">autoindex_exact_size</span> <span class="literal">on</span>;		<span class="comment"># 显示文件大小</span></span><br><span class="line">            <span class="attribute">autoindex_localtime</span> <span class="literal">on</span>;			<span class="comment"># 显示文件日期</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="attribute">location</span> /auth &#123;			<span class="comment"># 认证URI重定向到具体认证服务 ----------------添加请求认证</span></span><br><span class="line">            <span class="attribute">proxy_pass</span> http://127.0.0.1:5000;</span><br><span class="line">    	    <span class="attribute">proxy_pass_request_body</span> <span class="literal">off</span>;</span><br><span class="line">    	    <span class="attribute">proxy_set_header</span> Content-Length <span class="string">""</span>;</span><br><span class="line">    	    <span class="attribute">proxy_set_header</span> X-Original-URI <span class="variable">$request_uri</span>;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="开发-auth认证服务"><a href="#开发-auth认证服务" class="headerlink" title="开发/auth认证服务"></a>开发/auth认证服务</h4><p>​    略</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/20/consul-note/" rel="next" title="Consul使用笔记">
+                <i class="fa fa-chevron-left"></i> Consul使用笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -338,6 +485,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -358,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -421,6 +581,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简易文件服务器设计与搭建"><span class="nav-number">1.</span> <span class="nav-text">简易文件服务器设计与搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx"><span class="nav-number">1.2.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx快速搭建文件服务器"><span class="nav-number">1.2.1.</span> <span class="nav-text">Nginx快速搭建文件服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx请求认证模块nginx-auth-request-module"><span class="nav-number">1.2.2.</span> <span class="nav-text">Nginx请求认证模块nginx-auth-request-module</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Nginx模块添加"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">Nginx模块添加</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置带有权限认证的文件服务器"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">配置带有权限认证的文件服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开发-auth认证服务"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">开发/auth认证服务</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -554,6 +730,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
