@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="跨域资源共享CORS实战 CORS是一个W3C标准，全称“跨域资源共享”（Cross-origin resource sharing）；CORS定义了一种浏览器和服务器可以交互以确定允许跨院请求是否安全的方式。CORS协议需要浏览器和服务器端同时支持。  CORS协议 W3C的CORS规范将跨域资源请求划分为两种类型，“简单请求”和“非简单请求”。  简单请求定义​    要弄清楚CORS规范将哪">
+<meta name="description" content="跨域资源共享CORS实战 CORS是一个W3C标准，全称“跨域资源共享”（Cross-origin resource sharing）；CORS定义了一种浏览器和服务器可以交互以确定允许跨院请求是否安全的方式。CORS协议需要浏览器和服务器端同时支持。  CORS协议 W3C的CORS规范将跨域资源请求划分为两种类型，“简单请求”和“非简单请求”。  简单请求定义要弄清楚CORS规范将哪些类型的跨">
 <meta name="keywords" content="CORS,跨域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跨域资源共享CORS实战">
 <meta property="og:url" content="https://huixw.github.io/2018/10/29/http-cors/index.html">
 <meta property="og:site_name" content="stay hungry, stay foolish.">
-<meta property="og:description" content="跨域资源共享CORS实战 CORS是一个W3C标准，全称“跨域资源共享”（Cross-origin resource sharing）；CORS定义了一种浏览器和服务器可以交互以确定允许跨院请求是否安全的方式。CORS协议需要浏览器和服务器端同时支持。  CORS协议 W3C的CORS规范将跨域资源请求划分为两种类型，“简单请求”和“非简单请求”。  简单请求定义​    要弄清楚CORS规范将哪">
+<meta property="og:description" content="跨域资源共享CORS实战 CORS是一个W3C标准，全称“跨域资源共享”（Cross-origin resource sharing）；CORS定义了一种浏览器和服务器可以交互以确定允许跨院请求是否安全的方式。CORS协议需要浏览器和服务器端同时支持。  CORS协议 W3C的CORS规范将跨域资源请求划分为两种类型，“简单请求”和“非简单请求”。  简单请求定义要弄清楚CORS规范将哪些类型的跨">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-30T01:54:25.075Z">
+<meta property="og:updated_time" content="2018-10-30T01:56:43.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="跨域资源共享CORS实战">
-<meta name="twitter:description" content="跨域资源共享CORS实战 CORS是一个W3C标准，全称“跨域资源共享”（Cross-origin resource sharing）；CORS定义了一种浏览器和服务器可以交互以确定允许跨院请求是否安全的方式。CORS协议需要浏览器和服务器端同时支持。  CORS协议 W3C的CORS规范将跨域资源请求划分为两种类型，“简单请求”和“非简单请求”。  简单请求定义​    要弄清楚CORS规范将哪">
+<meta name="twitter:description" content="跨域资源共享CORS实战 CORS是一个W3C标准，全称“跨域资源共享”（Cross-origin resource sharing）；CORS定义了一种浏览器和服务器可以交互以确定允许跨院请求是否安全的方式。CORS协议需要浏览器和服务器端同时支持。  CORS协议 W3C的CORS规范将跨域资源请求划分为两种类型，“简单请求”和“非简单请求”。  简单请求定义要弄清楚CORS规范将哪些类型的跨">
 
 
 
@@ -396,7 +396,7 @@
 <h1 id="CORS协议"><a href="#CORS协议" class="headerlink" title="CORS协议"></a>CORS协议</h1><blockquote>
 <p>W3C的CORS规范将跨域资源请求划分为两种类型，“简单请求”和“非简单请求”。</p>
 </blockquote>
-<h2 id="简单请求"><a href="#简单请求" class="headerlink" title="简单请求"></a>简单请求</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>​    要弄清楚CORS规范将哪些类型的跨域资源请求划分为简单请求的范畴，需要额外理解几个名称的含义：</p>
+<h2 id="简单请求"><a href="#简单请求" class="headerlink" title="简单请求"></a>简单请求</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>要弄清楚CORS规范将哪些类型的跨域资源请求划分为简单请求的范畴，需要额外理解几个名称的含义：</p>
 <ul>
 <li><p>简单（HTTP）方法</p>
 <p>CORS规范将 <strong>GET</strong> 、<strong>HEAD</strong> 和 <strong>POST</strong> 这三个HTTP方法时为 <strong>简单HTTP方法</strong>；</p>
@@ -483,7 +483,7 @@
 <li>优点：可加入到每个具体上API方法上，实现简单</li>
 <li>缺点：通addCrosmappings全局配置</li>
 </ul>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>​    在进行前后端分离的微服务架构中，在服务器端分别尝试了三种方法，由于需要用到浏览器Cookie，后两种在Cookie支持上没有很好的办法，最终从安全上，可配置上，考虑采用了使用拦截器的方式。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>在进行前后端分离的微服务架构中，在服务器端分别尝试了三种方法，由于需要用到浏览器Cookie，后两种在Cookie支持上没有很好的办法，最终从安全上，可配置上，考虑采用了使用拦截器的方式。</p>
 
       
     </div>
