@@ -98,7 +98,7 @@
 <meta property="og:image" content="https://huixw.github.io/2018/10/30/gradient-descent/example_2.png">
 <meta property="og:image" content="https://huixw.github.io/2018/10/30/gradient-descent/example_3_1.png">
 <meta property="og:image" content="https://huixw.github.io/2018/10/30/gradient-descent/example_3_2.jpg">
-<meta property="og:updated_time" content="2018-10-31T04:13:46.058Z">
+<meta property="og:updated_time" content="2018-10-31T04:17:49.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梯度下降算法">
 <meta name="twitter:description" content="[TOC] 转自 https://www.jianshu.com/p/c7e642877b0e 本文将从一个下山的场景开始，先提出梯度下降算法的基本思想，进而从数学上解释梯度下降算法的原理，最后实现一个简单的梯度下降算法的实例！ 梯度下降的场景假设 梯度下降法的基本思想可以类比为一个下山的过程。假设这样一个场景：一个人被困在山上，需要从山上下来(i.e. 找到山的最低点，也就是山谷)。但此时山上的">
@@ -441,7 +441,7 @@
 <p>这就说明了为什么我们要千方百计的求取梯度！我们需要到达山底，就需要在每一步观测到此时最陡峭的地方，梯度就恰巧告诉了我们这个方向，这正是我们所需要的。所以我们只要沿着梯度的方向一直走，就能走到局部最低点！</p>
 <img src="/2018/10/30/gradient-descent/hill_down.png" title="下山">
 <h1 id="梯度下降算法的数学解释"><a href="#梯度下降算法的数学解释" class="headerlink" title="梯度下降算法的数学解释"></a>梯度下降算法的数学解释</h1><p>上面我们花了大量篇幅介绍梯度下降算法的基本思想和场景假设，以及梯度的概念和思想。下面我们就开始从数学上解释梯度下降算法的计算过程和思想！</p>
-<script type="math/tex; mode=display">Θ^1 = Θ^0 -α▽J(Θ)  $$ evaluated at $$Θ^0</script><p>此公式的意义：</p>
+<script type="math/tex; mode=display">Θ^1 = Θ^0 -α▽J(Θ)  \qquad evaluated at\qquad  Θ^0</script><p>此公式的意义：</p>
 <blockquote>
 <p>J是关于<script type="math/tex">Θ</script>的一个函数，我们当前所处的位置为<script type="math/tex">Θ^0</script>点，要从这个点走到<script type="math/tex">J(Θ)</script>的最小值点，也就是山底。首先我们先确定前进的方向，也就是梯度的反方向，然后走一段距离的步长，也就是<script type="math/tex">α</script>，走完这个步长，就达到了<script type="math/tex">Θ^1</script>这个点！</p>
 </blockquote>
