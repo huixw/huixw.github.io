@@ -98,7 +98,7 @@
 <meta property="og:image" content="https://huixw.github.io/2018/10/30/gradient-descent/example_2.png">
 <meta property="og:image" content="https://huixw.github.io/2018/10/30/gradient-descent/example_3_1.png">
 <meta property="og:image" content="https://huixw.github.io/2018/10/30/gradient-descent/example_3_2.jpg">
-<meta property="og:updated_time" content="2018-10-31T06:35:04.648Z">
+<meta property="og:updated_time" content="2018-11-01T02:32:48.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="梯度下降算法">
 <meta name="twitter:description" content="转自 https://www.jianshu.com/p/c7e642877b0e 本文将从一个下山的场景开始，先提出梯度下降算法的基本思想，进而从数学上解释梯度下降算法的原理，最后实现一个简单的梯度下降算法的实例！ 梯度下降的场景假设 梯度下降法的基本思想可以类比为一个下山的过程。假设这样一个场景：一个人被困在山上，需要从山上下来(i.e. 找到山的最低点，也就是山谷)。但此时山上的浓雾很大，导">
@@ -464,7 +464,7 @@
 <p>​    学习率：</p>
 <p>​    <script type="math/tex">α = 0.4</script></p>
 <p>根据梯度下降的计算公式：</p>
-<p>​    <script type="math/tex">Θ^1 = Θ^0 -α▽J(Θ)</script> evaluated at <script type="math/tex">Θ^0</script></p>
+<p>​    <script type="math/tex">Θ^1 = Θ^0 -α▽J(Θ)   \qquad evaluated at \qquad Θ^0</script></p>
 <p>我们开始进行梯度下降的迭代计算过程：</p>
 <p>​    <script type="math/tex">θ^0=1</script></p>
 <p>​    <script type="math/tex">θ^1=θ^0-α*J^′(θ)</script></p>
@@ -516,12 +516,11 @@
 </li>
 <li><p><script type="math/tex">y_i^{'}</script> 是数据中对应 <script type="math/tex">x_i</script> 的真实坐标值</p>
 </li>
-<li><script type="math/tex; mode=display">h$$  是我们的预测函数，根据每一个输入 $$x_i$$ ,根据  $$\Theta$$ 计算得到预测值 $$y_i$$ , 即：
-
-$$y_i = h_\Theta(x_i) = \theta_0 + \theta_1x_i</script></li>
+<li><p>$h$  是我们的预测函数，根据每一个输入 $x_i$ ,根据  $\Theta$ 计算得到预测值 $y_i$ , 即：</p>
+<script type="math/tex; mode=display">y_i = h_\Theta(x_i) = \theta_0 + \theta_1x_i</script></li>
 </ul>
 <p>我们可以根据代价函数看到，代价函数中的变量有练个，所以是一个多变量的梯度下降问题，秋姐出代价函数的梯度，也就是分别对两个变量进行微分</p>
-<p>​    <script type="math/tex">\nabla J(\Theta) = \langle \frac{\delta J}{\delta \theta_0} , \frac{\delta J}{\delta \theta_1} \rangle​</script></p>
+<p>​    <script type="math/tex">\nabla J(\Theta) = \langle \frac{\delta J}{\delta \theta_0} , \frac{\delta J}{\delta \theta_1} \rangle</script></p>
 <p>​    <script type="math/tex">\frac{\delta J}{\delta \theta_0} = \frac{1}{m} \sum_{i=1}^{m}(h_\Theta(x_i) - y_i^{'})</script></p>
 <p>​    <script type="math/tex">= \frac{1}{m} \sum_{i=1}^{m}(y_i - y_i^{'})</script></p>
 <p>​    <script type="math/tex">\frac{\delta J}{\delta \theta_1} = \frac{1}{m} \sum_{i=1}^{m}(h_\Theta(x_i) - y_i^{'})x_i</script></p>
@@ -530,7 +529,7 @@ $$y_i = h_\Theta(x_i) = \theta_0 + \theta_1x_i</script></li>
 <p>为了转换为矩阵的的计算，我们观测到预测函数的形式</p>
 <p>​    <script type="math/tex">y_i = h_\Theta(x_i) = \theta_0 + \theta_1x_i</script></p>
 <p>我们有两个变量，为了这个公式的矩阵化，我们可以给每个点x增加一维，这一维的值固定为1，这一维将乘到 <script type="math/tex">\theta_0</script>上这样就方便我们统一矩阵化计算:</p>
-<script type="math/tex; mode=display">\vec{X} = \begin{pmatrix} 1 & x_1 \\\\ 1 & x_{2}  \\\\ \vdots & \vdots \\\\ 1 & x_m  \end{pmatrix} $$   $$\vec{Y^\prime} =  \begin{pmatrix} y_1^\prime \\\\ y_2^\prime \\\\ \vdots \\\\ y_m^\prime  \end{pmatrix}</script><script type="math/tex; mode=display">\vec{\Theta}=\begin{pmatrix} \theta_0 \\\\ \theta_1 \end{pmatrix}</script><script type="math/tex; mode=display">\vec{Y} = \vec{X} \cdot \vec{\Theta} = \begin{pmatrix} y_1 \\\\ y_2 \\\\ \vdots \\\\\ y_m \end{pmatrix}</script><p>然后我们将代价函数和梯度转化向量成绩形式：</p>
+<script type="math/tex; mode=display">\vec{X} = \begin{pmatrix} 1 & x_1 \\\\ 1 & x_{2}  \\\\ \vdots & \vdots \\\\ 1 & x_m  \end{pmatrix} \qquad \vec{Y^\prime} =  \begin{pmatrix} y_1^\prime \\\\ y_2^\prime \\\\ \vdots \\\\ y_m^\prime  \end{pmatrix}</script><script type="math/tex; mode=display">\vec{\Theta}=\begin{pmatrix} \theta_0 \\\\ \theta_1 \end{pmatrix}</script><script type="math/tex; mode=display">\vec{Y} = \vec{X} \cdot \vec{\Theta} = \begin{pmatrix} y_1 \\\\ y_2 \\\\ \vdots \\\\\ y_m \end{pmatrix}</script><p>然后我们将代价函数和梯度转化向量成绩形式：</p>
 <script type="math/tex; mode=display">J(\Theta) = \frac{1}{2m}(\vec{Y} - \vec{Y^\prime})^T \cdot  (\vec{Y} - \vec{Y^\prime})</script><script type="math/tex; mode=display">\nabla J(\Theta) = \frac{1}{m}\vec{X}^T \cdot  (\vec{Y} - \vec{Y^\prime})</script><p>说明：</p>
 <ul>
 <li><script type="math/tex">\vec{\Theta}</script> 为需要迭代求解的最优参数</li>
