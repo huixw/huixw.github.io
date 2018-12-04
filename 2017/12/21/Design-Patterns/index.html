@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="design patterns," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="设计模式看懂UML类图从一个示例开始  车的类图结构为&amp;lt;&amp;gt;，表示车是一个抽象类； 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示； 小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示； 小汽车与发动机之间是组合关系，使用带实心箭头的实线表示； 学生与班级之间是聚合关系，使用带空心箭头的实线表示； 学生与身份证之间为关">
+<meta name="keywords" content="design patterns">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式">
+<meta property="og:url" content="https://huixw.github.io/2017/12/21/Design-Patterns/index.html">
+<meta property="og:site_name" content="stay hungry, stay foolish.">
+<meta property="og:description" content="设计模式看懂UML类图从一个示例开始  车的类图结构为&amp;lt;&amp;gt;，表示车是一个抽象类； 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示； 小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示； 小汽车与发动机之间是组合关系，使用带实心箭头的实线表示； 学生与班级之间是聚合关系，使用带空心箭头的实线表示； 学生与身份证之间为关">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/uml_class_struct.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_extends_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_aggregation_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_composition_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_association_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/a_dependency_b.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/simple_factory_pattern.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/factory_method.jpg">
+<meta property="og:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/abstract_factory_pattern.jpg">
+<meta property="og:updated_time" content="2018-06-21T12:22:30.671Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="设计模式">
+<meta name="twitter:description" content="设计模式看懂UML类图从一个示例开始  车的类图结构为&amp;lt;&amp;gt;，表示车是一个抽象类； 它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示； 小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示； 小汽车与发动机之间是组合关系，使用带实心箭头的实线表示； 学生与班级之间是聚合关系，使用带空心箭头的实线表示； 学生与身份证之间为关">
+<meta name="twitter:image" content="https://huixw.github.io/2017/12/21/Design-Patterns/uml_class_struct.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://huixw.github.io/2017/12/21/Design-Patterns/"/>
+
+
+
+
+
+  <title>设计模式 | stay hungry, stay foolish.</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">stay hungry, stay foolish.</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To be or not to be,that is the question</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huixw.github.io/2017/12/21/Design-Patterns/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sivan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="stay hungry, stay foolish.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">设计模式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T10:41:10+08:00">
+                2017-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/21/Design-Patterns/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/12/21/Design-Patterns/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h2 id="看懂UML类图"><a href="#看懂UML类图" class="headerlink" title="看懂UML类图"></a>看懂UML类图</h2><h3 id="从一个示例开始"><a href="#从一个示例开始" class="headerlink" title="从一个示例开始"></a>从一个示例开始</h3><img src="/2017/12/21/Design-Patterns/uml_class_struct.jpg" title="UML示例">
+<ul>
+<li>车的类图结构为&lt;<abstract>&gt;，表示车是一个抽象类；</abstract></li>
+<li>它有两个继承类：小汽车和自行车；它们之间的关系为实现关系，使用带空心箭头的虚线表示；</li>
+<li>小汽车为与SUV之间也是继承关系，它们之间的关系为泛化关系，使用带空心箭头的实线表示；</li>
+<li>小汽车与发动机之间是组合关系，使用带实心箭头的实线表示；</li>
+<li>学生与班级之间是聚合关系，使用带空心箭头的实线表示；</li>
+<li>学生与身份证之间为关联关系，使用一根实线表示；</li>
+<li>学生上学需要用到自行车，与自行车是一种依赖关系，使用带箭头的虚线表示；</li>
+</ul>
+<h3 id="类之间的关系"><a href="#类之间的关系" class="headerlink" title="类之间的关系"></a>类之间的关系</h3><h4 id="泛化关系-generalization"><a href="#泛化关系-generalization" class="headerlink" title="泛化关系(generalization)"></a>泛化关系(generalization)</h4><p>类的继承结构表现在UML中为：泛化(generalize)与实现(realize)：</p>
+<p>泛化是一种继承关系用空心箭头表示</p>
+<img src="/2017/12/21/Design-Patterns/a_extends_b.jpg" title="A继承B">
+<p>实现是一种实现关系用空心虚线箭头表示</p>
+<h4 id="聚合关系-aggregation"><a href="#聚合关系-aggregation" class="headerlink" title="聚合关系(aggregation)"></a>聚合关系(aggregation)</h4><p>聚合关系用一条带空心菱形箭头的直线表示，如下图表示A聚合到B上，或者说B由A组成；</p>
+<img src="/2017/12/21/Design-Patterns/a_aggregation_b.jpg" title="A聚合到B">
+<h4 id="组合关系-composition"><a href="#组合关系-composition" class="headerlink" title="组合关系(composition)"></a>组合关系(composition)</h4><p>组合关系用一条带实心菱形箭头表示，如下图A组成B；</p>
+<img src="/2017/12/21/Design-Patterns/a_composition_b.jpg" title="A是B的组成部分">
+<h4 id="关联关系-association"><a href="#关联关系-association" class="headerlink" title="关联关系(association)"></a>关联关系(association)</h4><p>关联关系是用一条直线表示的；它描述不同类的对象之间的结构关系；它是一种静态关系， 通常与运行状态无关，一般由常识等因素决定的；它一般用来定义对象之间静态的、天然的结构； 所以，关联关系是一种“强关联”的关系；</p>
+<p>比如，乘车人和车票之间就是一种关联关系；学生和学校就是一种关联关系；</p>
+<p>关联关系默认不强调方向，表示对象间相互知道；如果特别强调方向，如下图，表示A知道B，但 B不知道A；</p>
+<img src="/2017/12/21/Design-Patterns/a_association_b.jpg" title="AB互相关联">
+<h4 id="依赖关系-dependency"><a href="#依赖关系-dependency" class="headerlink" title="依赖关系(dependency)"></a>依赖关系(dependency)</h4><p>依赖关系使用一套带箭头的虚线表示；如下图表示A依赖B；他描述一个对象在运行期间会用到另一个对象的性关系；</p>
+<img src="/2017/12/21/Design-Patterns/a_dependency_b.jpg" title="A依赖B">
+<h2 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h2><h3 id="简单工程模式（Simple-Factory-Pattern）"><a href="#简单工程模式（Simple-Factory-Pattern）" class="headerlink" title="简单工程模式（Simple Factory Pattern）"></a>简单工程模式（Simple Factory Pattern）</h3><h4 id="模式动机"><a href="#模式动机" class="headerlink" title="模式动机"></a>模式动机</h4><p>​    考虑一个简单的软件应用场景，一个软件系统可以提供多个外观不同的按钮（如，圆形、方形、菱形），这些按钮都源自同一个基类，继承后不同的子类修改了部分属性从而使得他们可以呈现不同的外观，如果我们希望使用这些按钮时，不需要知道这些按钮类的具体名字，只需要知道表示一个按钮类的一个参数，并提供一个调用方便的方法，把该参数传入方法即可返回一个相应的按钮对象，此时就可以使用简单工厂模式。</p>
+<h4 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h4><p>​    简单工厂模式：又称静态工厂方法模式，它属于类创建型模式。在简单工厂模式中，可根据参数的不同返回不同类的实例。简单工厂模式专门定义一个类负责创建其他类的实例，被创建的实例通常具有共同的父类。</p>
+<h4 id="模式结构"><a href="#模式结构" class="headerlink" title="模式结构"></a>模式结构</h4><p>​    简单工厂模式包含如下角色：</p>
+<ul>
+<li><p>Factory：工厂角色</p>
+<p>工厂角色    负责创建所有实例的内部逻辑</p>
+</li>
+<li><p>Product：抽象产品角色</p>
+<p>抽象产品角色是创建所有对象的父类，负责描述所有实例所共有公共接口</p>
+</li>
+<li><p>ConcreteProduct：具体产品角色</p>
+<p>具体产品角色是创建目标，所有创建的对象都充当这个角色的某个具体类的实例</p>
+</li>
+</ul>
+<img src="/2017/12/21/Design-Patterns/simple_factory_pattern.jpg" title="简单工厂模式">
+<h4 id="使用案例"><a href="#使用案例" class="headerlink" title="使用案例"></a>使用案例</h4><p>​    DateFormat、KeyGenerator.getInstance(“DESede”)、Cipher.getInstance(“DESede”)等</p>
+<h3 id="工厂方法模式（Factory-Method-Pattern）"><a href="#工厂方法模式（Factory-Method-Pattern）" class="headerlink" title="工厂方法模式（Factory Method Pattern）"></a>工厂方法模式（Factory Method Pattern）</h3><h4 id="模式动机-1"><a href="#模式动机-1" class="headerlink" title="模式动机"></a>模式动机</h4><p>​    针对简单工厂模式，当按钮种类增加时，需要对工厂类进行修改；特别是种类增加到一定量时，增加开发维护难度；此时考虑将工厂方法进行抽象，具体的按钮创建交给不同的工厂子类来实现；这种改良使得整体设计更加符合“开闭原则”</p>
+<h4 id="模式定义-1"><a href="#模式定义-1" class="headerlink" title="模式定义"></a>模式定义</h4><p>工厂方法模式又成为工厂模式，也叫虚拟构造器模式、多态工厂模式；它属于类创建型模式。在工厂方法模式中工厂类负责定义创建产品的公共接口，而工厂子类负责生成具体的产品对象，这样做的目的是产品创建延后，使具体的产品使用者不用关注产品的创建过程。</p>
+<h4 id="模式结构-1"><a href="#模式结构-1" class="headerlink" title="模式结构"></a>模式结构</h4><p>工厂方法模式包含如下角色：</p>
+<ul>
+<li>Product 抽象产品</li>
+<li>ConcreteProduct 具体产品</li>
+<li>Factory抽象工厂</li>
+<li>ConcreteFactory具体工厂</li>
+</ul>
+<img src="/2017/12/21/Design-Patterns/factory_method.jpg" title="工厂方法模式">
+<h4 id="使用案例-1"><a href="#使用案例-1" class="headerlink" title="使用案例"></a>使用案例</h4><p>JDBC中的工厂方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Connection创建Statemeng:</span></span><br><span class="line">Connection conn=DriverManager.getConnection(<span class="string">"jdbc:microsoft:sqlserver://loc</span></span><br><span class="line"><span class="string">alhost:1433; DatabaseName=DB;user=sa;password="</span>);</span><br><span class="line">Statement statement=conn.createStatement();</span><br><span class="line">ResultSet rs=statement.executeQuery(<span class="string">"select * from UserInfo"</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="抽象工程模式（Abstract-Factory）"><a href="#抽象工程模式（Abstract-Factory）" class="headerlink" title="抽象工程模式（Abstract Factory）"></a>抽象工程模式（Abstract Factory）</h3><h4 id="模式动机-2"><a href="#模式动机-2" class="headerlink" title="模式动机"></a>模式动机</h4><p>​    在工厂方法模式中具体的工厂负责生产具体的产品，每一个具体的工厂对应一个具体的产品，工厂方法也具有唯一性，有时候我们需要一个工厂可以提供多个产品对象，而不是单一的产品对象。</p>
+<h4 id="模式定义-2"><a href="#模式定义-2" class="headerlink" title="模式定义"></a>模式定义</h4><p>​    抽象工厂模式（Abstract Factory Pattern）：提供一系列相关相互依赖的接口，而无需指定他们具体的类。抽象工厂模式又称Kit模式，属于对象创建型模式。</p>
+<h4 id="模式结构-2"><a href="#模式结构-2" class="headerlink" title="模式结构"></a>模式结构</h4><ul>
+<li>AbstractFactory 抽象工厂</li>
+<li>ConcreteFactory 具体工厂</li>
+<li>AbstractProduct 抽象产品</li>
+<li>ConcreteProduct 具体产品</li>
+</ul>
+<img src="/2017/12/21/Design-Patterns/abstract_factory_pattern.jpg" title="抽象工厂模式">
+<h3 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h3><h4 id="模式动机-3"><a href="#模式动机-3" class="headerlink" title="模式动机"></a>模式动机</h4><p>​    在软件开复杂对象中开发过程中，存在大量类似汽车一样的复杂对象，他们拥有一些列的成员属性，这些成员属性中有些是引用类型的成员对象。而在这些复杂对象中还可能存在一些限制条件，如默写属性没有复制不能做一个完整的产品使用，以及属性的初始化顺序等。</p>
+<h4 id="模式定义-3"><a href="#模式定义-3" class="headerlink" title="模式定义"></a>模式定义</h4><p>​    建造者模式（Builder Pattern）：将复杂的对象的构建与他的表示分离，使得同样的构建可以创造不同的表示。</p>
+<p>​    建造者模式是一步步创建一个复杂对象的过程，它允许用户指定复杂对象的类型和内容j就可以构建他们，用户不需要知道内部具体的构建细节。</p>
+<h4 id="模式结构-3"><a href="#模式结构-3" class="headerlink" title="模式结构"></a>模式结构</h4><p>建造者的模式角色包含如下角色：</p>
+<ul>
+<li>Builder：抽象建造者</li>
+<li>ConcreteBuilder：具体的建造者</li>
+<li>Director：指挥者</li>
+<li>Product：产品</li>
+</ul>
+<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><h2 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h2><h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><h3 id="装饰模式"><a href="#装饰模式" class="headerlink" title="装饰模式"></a>装饰模式</h3><h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h2><h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><h3 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h3><h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><h3 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h3><h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3><h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><p>摘自 <a href="https://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html#id1" target="_blank" rel="external">https://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html#id1</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/design-patterns/" rel="tag"># design patterns</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/15/docker-learning/" rel="next" title="docker-learning">
+                <i class="fa fa-chevron-left"></i> docker-learning
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/25/Machine-Learning-Evluate/" rel="prev" title="机器学习-模型评估">
+                机器学习-模型评估 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">sivan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#看懂UML类图"><span class="nav-number">1.1.</span> <span class="nav-text">看懂UML类图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从一个示例开始"><span class="nav-number">1.1.1.</span> <span class="nav-text">从一个示例开始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类之间的关系"><span class="nav-number">1.1.2.</span> <span class="nav-text">类之间的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛化关系-generalization"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">泛化关系(generalization)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#聚合关系-aggregation"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">聚合关系(aggregation)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组合关系-composition"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">组合关系(composition)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关联关系-association"><span class="nav-number">1.1.2.4.</span> <span class="nav-text">关联关系(association)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖关系-dependency"><span class="nav-number">1.1.2.5.</span> <span class="nav-text">依赖关系(dependency)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建型模式"><span class="nav-number">1.2.</span> <span class="nav-text">创建型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单工程模式（Simple-Factory-Pattern）"><span class="nav-number">1.2.1.</span> <span class="nav-text">简单工程模式（Simple Factory Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模式动机"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">模式动机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式定义"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">模式定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式结构"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">模式结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用案例"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">使用案例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂方法模式（Factory-Method-Pattern）"><span class="nav-number">1.2.2.</span> <span class="nav-text">工厂方法模式（Factory Method Pattern）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模式动机-1"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">模式动机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式定义-1"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">模式定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式结构-1"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">模式结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用案例-1"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">使用案例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象工程模式（Abstract-Factory）"><span class="nav-number">1.2.3.</span> <span class="nav-text">抽象工程模式（Abstract Factory）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模式动机-2"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">模式动机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式定义-2"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">模式定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式结构-2"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">模式结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建造者模式"><span class="nav-number">1.2.4.</span> <span class="nav-text">建造者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模式动机-3"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">模式动机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式定义-3"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">模式定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模式结构-3"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">模式结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式"><span class="nav-number">1.2.5.</span> <span class="nav-text">单例模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构型模式"><span class="nav-number">1.3.</span> <span class="nav-text">结构型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适配器模式"><span class="nav-number">1.3.1.</span> <span class="nav-text">适配器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桥接模式"><span class="nav-number">1.3.2.</span> <span class="nav-text">桥接模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装饰模式"><span class="nav-number">1.3.3.</span> <span class="nav-text">装饰模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外观模式"><span class="nav-number">1.3.4.</span> <span class="nav-text">外观模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#享元模式"><span class="nav-number">1.3.5.</span> <span class="nav-text">享元模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理模式"><span class="nav-number">1.3.6.</span> <span class="nav-text">代理模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行为型模式"><span class="nav-number">1.4.</span> <span class="nav-text">行为型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令模式"><span class="nav-number">1.4.1.</span> <span class="nav-text">命令模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中介者模式"><span class="nav-number">1.4.2.</span> <span class="nav-text">中介者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观察者模式"><span class="nav-number">1.4.3.</span> <span class="nav-text">观察者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#状态模式"><span class="nav-number">1.4.4.</span> <span class="nav-text">状态模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#策略模式"><span class="nav-number">1.4.5.</span> <span class="nav-text">策略模式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#附录"><span class="nav-number">2.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sivan</span>
+
+  
+</div>
+
+
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'huixw',
+            repo: 'gitment-comment',
+            
+            lang: "auto" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'b166d67b1fb39c27405931650d78fce0271b680b',
+            
+                client_id: 'edf7a10b88005189c29d'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
