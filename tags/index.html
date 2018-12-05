@@ -600,8 +600,8 @@
 <!-- LOCAL: You can save these files to your site and update links -->
     
         
-        <link rel="stylesheet" href="https://huixw.github.io/gitmint/style/default.css">
-        <script src="https://huixw.github.io/gitmint/dist/gitmint.browser.js"></script>
+        <link rel="stylesheet" href="https://huixw.github.io/gitment/style/default.css">
+        <script src="https://huixw.github.io/gitment/dist/gitment.browser.js"></script>
     
 <!-- END LOCAL -->
 
@@ -610,12 +610,10 @@
     
       <script type="text/javascript">
       function renderGitment(){
-        var gitment = new Gitmint({
+        var gitment = new Gitment({
             id: window.location.pathname, 
             owner: 'huixw',
             repo: 'gitment-comment',
-            
-            lang: "auto" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
             
             oauth: {
             
