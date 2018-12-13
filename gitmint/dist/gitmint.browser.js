@@ -4035,7 +4035,7 @@ var Gitmint =
                     }, {
                         key: 'loginLink',
                         get: function get() {
-                            var oauthUri = 'https://auth.baixiaotu.cc';
+                            var oauthUri = 'https://github.com/login/oauth/authorize';
                             var redirect_uri = this.oauth.redirect_uri || window.location.href.replace(/^https?/i, this.oauth.redirect_protocol || force_redirect_protocol);
 
                             var oauthParams = Object.assign({
