@@ -3128,7 +3128,7 @@ var Gitment =
                     var container = document.createElement('div');
                     container.lang = "en-US";
                     container.className = 'gitment-container gitment-footer-container';
-                    container.innerHTML = '\n    Powered by\n    <a class="gitment-footer-project-link" href="https://huixw.github.io/imsun/gitment" target="_blank">\n      Gitment\n    </a>\n  ';
+                    container.innerHTML = '\n    Powered by\n    <a class="gitment-footer-project-link" href="https://github.com/imsun/gitment" target="_blank">\n      Gitment\n    </a>\n  ';
                     return container;
                 }
 
