@@ -4035,7 +4035,7 @@ var Gitmint =
                     }, {
                         key: 'loginLink',
                         get: function get() {
-                            var oauthUri = 'https://github.com/login/oauth/authorize';
+                            var oauthUri = 'https://auth.baixiaotu.cc';
                             var redirect_uri = this.oauth.redirect_uri || window.location.href.replace(/^https?/i, this.oauth.redirect_protocol || force_redirect_protocol);
 
                             var oauthParams = Object.assign({
@@ -4130,7 +4130,7 @@ var Gitmint =
                             }, options);
 
                             this.state.user.isLoggingIn = true;
-                            var logging = !proxy_gateway ? _utils.http.post('https://github.com/login/oauth/access_token', { code: code, client_id: client_id, client_secret: client_secret }, '') : _utils.http.post('/login/oauth/access_token', 'code=' + code + '&client_id=' + client_id, proxy_gateway);
+                            var logging = !proxy_gateway ? _utils.http.post('https://auth.baixiaotu.cc', { code: code, client_id: client_id, client_secret: client_secret }, '') : _utils.http.post('/login/oauth/access_token', 'code=' + code + '&client_id=' + client_id, proxy_gateway);
                             logging.then(function (data) {
                                 _this.accessToken = data.access_token;
                                 _this.update();

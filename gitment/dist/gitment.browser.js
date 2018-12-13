@@ -3128,7 +3128,7 @@ var Gitment =
                     var container = document.createElement('div');
                     container.lang = "en-US";
                     container.className = 'gitment-container gitment-footer-container';
-                    container.innerHTML = '\n    Powered by\n    <a class="gitment-footer-project-link" href="https://github.com/imsun/gitment" target="_blank">\n      Gitment\n    </a>\n  ';
+                    container.innerHTML = '\n    Powered by\n    <a class="gitment-footer-project-link" href="https://huixw.github.io/imsun/gitment" target="_blank">\n      Gitment\n    </a>\n  ';
                     return container;
                 }
 
@@ -3352,7 +3352,7 @@ var Gitment =
                     }, {
                         key: 'loginLink',
                         get: function get() {
-                            var oauthUri = 'https://github.com/login/oauth/authorize';
+                            var oauthUri = 'https://auth.baixiaotu.cc';
                             var redirect_uri = this.oauth.redirect_uri || window.location.href;
 
                             var oauthParams = Object.assign({
@@ -3428,7 +3428,7 @@ var Gitment =
                             }, options);
 
                             this.state.user.isLoggingIn = true;
-                            _utils.http.post('https://github.com/login/oauth/access_token', {
+                            _utils.http.post('https://auth.baixiaotu.cc', {
                                 code: code,
                                 client_id: client_id,
                                 client_secret: client_secret
