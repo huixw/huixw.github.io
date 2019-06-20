@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="huixw, sivan">
+  <meta name="keywords" content="mysql,">
 
 
 
@@ -83,13 +83,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="stay hungry, stay foolish.">
-<meta property="og:url" content="https://huixw.github.io/tags/机器学习/index.html">
+<meta name="description" content="一、说明 主机环境Centos 7  二、安装步骤1. 添加Mysql的yum仓库a. 访问Mysql的yum仓库下载页面：https://dev.mysql.com/downloads/repo/yum/ b. 选择下载和操作系统版本对应的安装包  服务器为Centos 7, 因此本文选择 Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architec">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql-install-yum">
+<meta property="og:url" content="https://huixw.github.io/2019/06/20/mysql-install-yum/index.html">
 <meta property="og:site_name" content="stay hungry, stay foolish.">
+<meta property="og:description" content="一、说明 主机环境Centos 7  二、安装步骤1. 添加Mysql的yum仓库a. 访问Mysql的yum仓库下载页面：https://dev.mysql.com/downloads/repo/yum/ b. 选择下载和操作系统版本对应的安装包  服务器为Centos 7, 因此本文选择 Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architec">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://huixw.github.io/2019/06/20/mysql-install-yum/yum-repolist.png">
+<meta property="og:updated_time" content="2019-06-20T07:51:37.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="stay hungry, stay foolish.">
+<meta name="twitter:title" content="mysql-install-yum">
+<meta name="twitter:description" content="一、说明 主机环境Centos 7  二、安装步骤1. 添加Mysql的yum仓库a. 访问Mysql的yum仓库下载页面：https://dev.mysql.com/downloads/repo/yum/ b. 选择下载和操作系统版本对应的安装包  服务器为Centos 7, 因此本文选择 Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architec">
+<meta name="twitter:image" content="https://huixw.github.io/2019/06/20/mysql-install-yum/yum-repolist.png">
 
 
 
@@ -119,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://huixw.github.io/tags/机器学习/">
+  <link rel="canonical" href="https://huixw.github.io/2019/06/20/mysql-install-yum/">
 
 
 
 
 
-  <title>标签: 机器学习 | stay hungry, stay foolish.</title>
+  <title>mysql-install-yum | stay hungry, stay foolish.</title>
   
 
 
@@ -144,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,104 +287,226 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>机器学习<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://huixw.github.io/2019/06/20/mysql-install-yum/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sivan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="stay hungry, stay foolish.">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/30/gradient-descent/" itemprop="url">
-              
-                <span itemprop="name">梯度下降算法</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">mysql-install-yum</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-30T16:05:05+08:00" content="2018-10-30">
-          10-30
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-20T15:38:37+08:00">
+                2019-06-20
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂项/" itemprop="url" rel="index">
+                    <span itemprop="name">杂项</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/20/mysql-install-yum/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/06/20/mysql-install-yum/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/25/Machine-Learning-Evluate/" itemprop="url">
-              
-                <span itemprop="name">机器学习-模型评估</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-12-25T15:00:42+08:00" content="2017-12-25">
-          12-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/06/python-machine-learn/" itemprop="url">
-              
-                <span itemprop="name">Python机器学习</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-12-06T23:54:53+08:00" content="2017-12-06">
-          12-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <h1 id="一、说明"><a href="#一、说明" class="headerlink" title="一、说明"></a>一、说明</h1><blockquote>
+<p>主机环境Centos 7</p>
+</blockquote>
+<h1 id="二、安装步骤"><a href="#二、安装步骤" class="headerlink" title="二、安装步骤"></a>二、安装步骤</h1><h2 id="1-添加Mysql的yum仓库"><a href="#1-添加Mysql的yum仓库" class="headerlink" title="1. 添加Mysql的yum仓库"></a>1. 添加Mysql的yum仓库</h2><p>a. 访问Mysql的yum仓库下载页面：<a href="https://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">https://dev.mysql.com/downloads/repo/yum/</a></p>
+<p>b. 选择下载和操作系统版本对应的安装包</p>
+<blockquote>
+<p>服务器为Centos 7, 因此本文选择 <strong>Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architecture Independent), RPM Package</strong> 版本，(mysql80-community-release-el7-2.noarch.rpm)</p>
+</blockquote>
+<p>c. 使用下面的命令进行安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo rpm -Uvh mysql80-community-release-el7-2.noarch.rpm)</span><br></pre></td></tr></table></figure>
+<h2 id="2-选择一个发型版本"><a href="#2-选择一个发型版本" class="headerlink" title="2. 选择一个发型版本"></a>2. 选择一个发型版本</h2><p>当使用Mysql yum仓库时，默认安装最新的发型版本，可以通过以下命令查看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> yum repolist all | grep mysql</span><br></pre></td></tr></table></figure>
+<img src="/2019/06/20/mysql-install-yum/yum-repolist.png" title="mysql repo list">
+<blockquote>
+<p>默认是mysql80-* enable状态，截图为修改过后的截图</p>
+</blockquote>
+<p>如果要安装最新版本的的Mysql数据库，则不需要调整；如果要安装历史发型版，可以通过<em>yum-config-manager</em>命令修改生效的版本，可参考如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo yum-config-manager --disable mysql80--community</span><br><span class="line"><span class="meta">shell&gt;</span> sudo yum-config-manager --enable mysql57-community</span><br></pre></td></tr></table></figure>
+<p>同使用<em>yum-config-manager</em>一样我们也可以通过手工修改<em>/etc/yum.repos.d/mysql-community.repo</em>文件，通过指定<em>enable=0</em>来禁用，<em>enable=1</em>启用来调整安装版本。</p>
+<p>如果同事有多个版本被指定为有效，则yum会默认选择最新的版本进行安装。可通过下面命令查看将要安装的Mysql版本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> yum repolist enabled | grep mysql</span><br></pre></td></tr></table></figure>
+<h2 id="3-安装Mysql"><a href="#3-安装Mysql" class="headerlink" title="3. 安装Mysql"></a>3. 安装Mysql</h2><p>通过下面命令进行安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo yum install mysql-community-server</span><br></pre></td></tr></table></figure>
+<p>该命令将安装Mysql服务以及，其依赖软件。</p>
+<h2 id="4-启动Mysql服务"><a href="#4-启动Mysql服务" class="headerlink" title="4. 启动Mysql服务"></a>4. 启动Mysql服务</h2><p>使用下面命令启动Mysql服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo service mysqld start</span><br></pre></td></tr></table></figure>
+<p>对于基于EL7的系统，如Centos7，建议采用下面命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo systemctl start mysqld.service</span><br></pre></td></tr></table></figure>
+<p>通过下面命令查看Mysql服务状态:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell&gt; sudo service mysqld status</span><br></pre></td></tr></table></figure>
+<p>对于基于EL7的系统，如Centos7，建议采用下面命令:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo systemctl status mysqld.service</span><br></pre></td></tr></table></figure>
+<h3 id="Mysql服务初始化过程大概经历以下过程"><a href="#Mysql服务初始化过程大概经历以下过程" class="headerlink" title="Mysql服务初始化过程大概经历以下过程"></a>Mysql服务初始化过程大概经历以下过程</h3><ul>
+<li><p>服务初始化</p>
+</li>
+<li><p>安全连接证书以及秘钥证书创建</p>
+</li>
+<li><p>密码验证插件安装以及启用</p>
+</li>
+<li><p>超级管理员<em>‘root’@’localhost’</em>创建，密码写在error日志中，使用下面的命令获取：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo grep 'temporary password' /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>修改密码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> mysql -uroot -p</span><br><span class="line"><span class="meta">mysql&gt;</span> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/02/recommend-svd/" rel="next" title="SVD在推荐系统中的应用探索">
+                <i class="fa fa-chevron-left"></i> SVD在推荐系统中的应用探索
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -385,6 +514,17 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -405,8 +545,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -466,6 +615,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、说明"><span class="nav-number">1.</span> <span class="nav-text">一、说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、安装步骤"><span class="nav-number">2.</span> <span class="nav-text">二、安装步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-添加Mysql的yum仓库"><span class="nav-number">2.1.</span> <span class="nav-text">1. 添加Mysql的yum仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-选择一个发型版本"><span class="nav-number">2.2.</span> <span class="nav-text">2. 选择一个发型版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装Mysql"><span class="nav-number">2.3.</span> <span class="nav-text">3. 安装Mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-启动Mysql服务"><span class="nav-number">2.4.</span> <span class="nav-text">4. 启动Mysql服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mysql服务初始化过程大概经历以下过程"><span class="nav-number">2.4.1.</span> <span class="nav-text">Mysql服务初始化过程大概经历以下过程</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -604,6 +769,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -650,6 +819,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'huixw',
+            repo: 'gitment-comment',
+            
+            lang: "auto" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'b166d67b1fb39c27405931650d78fce0271b680b',
+            
+                client_id: 'edf7a10b88005189c29d'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 
@@ -991,26 +1184,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
