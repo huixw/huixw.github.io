@@ -6,10 +6,10 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta name="theme-color" content="#222">
 
 
@@ -24,8 +24,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
 
@@ -44,7 +44,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -52,9 +52,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="mysql,">
+  <meta name="keywords" content="mysql," />
 
 
 
@@ -83,19 +83,18 @@
 
 
 
-<meta name="description" content="一、说明 主机环境Centos 7  二、安装步骤1. 添加Mysql的yum仓库a. 访问Mysql的yum仓库下载页面：https://dev.mysql.com/downloads/repo/yum/ b. 选择下载和操作系统版本对应的安装包  服务器为Centos 7, 因此本文选择 Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architec">
-<meta name="keywords" content="mysql">
+<meta name="description" content="一、说明 主机环境Centos 7  二、安装步骤1. 添加Mysql的yum仓库a. 访问Mysql的yum仓库下载页面：https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;repo&#x2F;yum&#x2F; b. 选择下载和操作系统版本对应的安装包  服务器为Centos 7, 因此本文选择 Red Hat Enterprise Linux 7 &#x2F; Oracle Linux 7 (Architec">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql-install-yum">
 <meta property="og:url" content="https://huixw.github.io/2019/06/20/mysql-install-yum/index.html">
 <meta property="og:site_name" content="stay hungry, stay foolish.">
-<meta property="og:description" content="一、说明 主机环境Centos 7  二、安装步骤1. 添加Mysql的yum仓库a. 访问Mysql的yum仓库下载页面：https://dev.mysql.com/downloads/repo/yum/ b. 选择下载和操作系统版本对应的安装包  服务器为Centos 7, 因此本文选择 Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architec">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:description" content="一、说明 主机环境Centos 7  二、安装步骤1. 添加Mysql的yum仓库a. 访问Mysql的yum仓库下载页面：https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;repo&#x2F;yum&#x2F; b. 选择下载和操作系统版本对应的安装包  服务器为Centos 7, 因此本文选择 Red Hat Enterprise Linux 7 &#x2F; Oracle Linux 7 (Architec">
 <meta property="og:image" content="https://huixw.github.io/2019/06/20/mysql-install-yum/yum-repolist.png">
-<meta property="og:updated_time" content="2019-06-20T07:51:37.457Z">
+<meta property="article:published_time" content="2019-06-20T07:38:37.000Z">
+<meta property="article:modified_time" content="2019-06-20T07:51:37.457Z">
+<meta property="article:author" content="sivan">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql-install-yum">
-<meta name="twitter:description" content="一、说明 主机环境Centos 7  二、安装步骤1. 添加Mysql的yum仓库a. 访问Mysql的yum仓库下载页面：https://dev.mysql.com/downloads/repo/yum/ b. 选择下载和操作系统版本对应的安装包  服务器为Centos 7, 因此本文选择 Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architec">
 <meta name="twitter:image" content="https://huixw.github.io/2019/06/20/mysql-install-yum/yum-repolist.png">
 
 
@@ -126,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="https://huixw.github.io/2019/06/20/mysql-install-yum/">
+  <link rel="canonical" href="https://huixw.github.io/2019/06/20/mysql-install-yum/"/>
 
 
 
@@ -142,7 +141,7 @@
 
 
 
-</head>
+<meta name="generator" content="Hexo 4.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -160,7 +159,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">stay hungry, stay foolish.</span>
         <span class="logo-line-after"><i></i></span>
@@ -188,9 +187,9 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -198,9 +197,9 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+          <a href="/about/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -208,9 +207,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -218,9 +217,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
             分类
           </a>
@@ -228,9 +227,9 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+          <a href="/archives/%20" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -243,7 +242,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
             搜索
           </a>
@@ -264,7 +263,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -305,7 +306,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sivan">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
@@ -341,7 +342,7 @@
           </span>
 
           
-            <span class="post-category">
+            <span class="post-category" >
             
               <span class="post-meta-divider">|</span>
             
@@ -353,7 +354,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/杂项/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%9D%82%E9%A1%B9/" itemprop="url" rel="index">
                     <span itemprop="name">杂项</span>
                   </a>
                 </span>
@@ -409,29 +410,29 @@
 <p>服务器为Centos 7, 因此本文选择 <strong>Red Hat Enterprise Linux 7 / Oracle Linux 7 (Architecture Independent), RPM Package</strong> 版本，(mysql80-community-release-el7-2.noarch.rpm)</p>
 </blockquote>
 <p>c. 使用下面的命令进行安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo rpm -Uvh mysql80-community-release-el7-2.noarch.rpm)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> sudo rpm -Uvh mysql80-community-release-el7-2.noarch.rpm)</span></span><br></pre></td></tr></table></figure>
 <h2 id="2-选择一个发型版本"><a href="#2-选择一个发型版本" class="headerlink" title="2. 选择一个发型版本"></a>2. 选择一个发型版本</h2><p>当使用Mysql yum仓库时，默认安装最新的发型版本，可以通过以下命令查看：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> yum repolist all | grep mysql</span><br></pre></td></tr></table></figure>
-<img src="/2019/06/20/mysql-install-yum/yum-repolist.png" title="mysql repo list">
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> yum repolist all | grep mysql</span></span><br></pre></td></tr></table></figure>
+<img src="/2019/06/20/mysql-install-yum/yum-repolist.png" class="" title="mysql repo list">
 <blockquote>
 <p>默认是mysql80-* enable状态，截图为修改过后的截图</p>
 </blockquote>
 <p>如果要安装最新版本的的Mysql数据库，则不需要调整；如果要安装历史发型版，可以通过<em>yum-config-manager</em>命令修改生效的版本，可参考如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo yum-config-manager --disable mysql80--community</span><br><span class="line"><span class="meta">shell&gt;</span> sudo yum-config-manager --enable mysql57-community</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> sudo yum-config-manager --<span class="built_in">disable</span> mysql80--community</span></span><br><span class="line"><span class="meta">shell&gt;</span><span class="bash"> sudo yum-config-manager --<span class="built_in">enable</span> mysql57-community</span></span><br></pre></td></tr></table></figure>
 <p>同使用<em>yum-config-manager</em>一样我们也可以通过手工修改<em>/etc/yum.repos.d/mysql-community.repo</em>文件，通过指定<em>enable=0</em>来禁用，<em>enable=1</em>启用来调整安装版本。</p>
 <p>如果同事有多个版本被指定为有效，则yum会默认选择最新的版本进行安装。可通过下面命令查看将要安装的Mysql版本：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> yum repolist enabled | grep mysql</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> yum repolist enabled | grep mysql</span></span><br></pre></td></tr></table></figure>
 <h2 id="3-安装Mysql"><a href="#3-安装Mysql" class="headerlink" title="3. 安装Mysql"></a>3. 安装Mysql</h2><p>通过下面命令进行安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo yum install mysql-community-server</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> sudo yum install mysql-community-server</span></span><br></pre></td></tr></table></figure>
 <p>该命令将安装Mysql服务以及，其依赖软件。</p>
 <h2 id="4-启动Mysql服务"><a href="#4-启动Mysql服务" class="headerlink" title="4. 启动Mysql服务"></a>4. 启动Mysql服务</h2><p>使用下面命令启动Mysql服务：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo service mysqld start</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> sudo service mysqld start</span></span><br></pre></td></tr></table></figure>
 <p>对于基于EL7的系统，如Centos7，建议采用下面命令:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo systemctl start mysqld.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> sudo systemctl start mysqld.service</span></span><br></pre></td></tr></table></figure>
 <p>通过下面命令查看Mysql服务状态:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell&gt; sudo service mysqld status</span><br></pre></td></tr></table></figure>
 <p>对于基于EL7的系统，如Centos7，建议采用下面命令:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo systemctl status mysqld.service</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> sudo systemctl status mysqld.service</span></span><br></pre></td></tr></table></figure>
 <h3 id="Mysql服务初始化过程大概经历以下过程"><a href="#Mysql服务初始化过程大概经历以下过程" class="headerlink" title="Mysql服务初始化过程大概经历以下过程"></a>Mysql服务初始化过程大概经历以下过程</h3><ul>
 <li><p>服务初始化</p>
 </li>
@@ -440,12 +441,12 @@
 <li><p>密码验证插件安装以及启用</p>
 </li>
 <li><p>超级管理员<em>‘root’@’localhost’</em>创建，密码写在error日志中，使用下面的命令获取：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> sudo grep 'temporary password' /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> sudo grep <span class="string">'temporary password'</span> /var/<span class="built_in">log</span>/mysqld.log</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
 <li><p>修改密码</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span> mysql -uroot -p</span><br><span class="line"><span class="meta">mysql&gt;</span> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">shell&gt;</span><span class="bash"> mysql -uroot -p</span></span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'MyNewPass4!'</span>;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -487,6 +488,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/20/maven-archetype/" rel="prev" title="maven-archetype">
+                maven-archetype <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -568,9 +573,9 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -592,7 +597,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -645,7 +650,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
